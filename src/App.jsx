@@ -22,11 +22,12 @@ const App = () => {
       {/* <Programs/> */}
       <About setPlayState={setPlayState} />
       <Campus />
+      <Testimonials />
       <div className="container">
         {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
 
         {/* <Title subTitle="TESTIMONIALS" title="What Student Says" /> */}
-        <Testimonials />
+
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
         <Footer />
