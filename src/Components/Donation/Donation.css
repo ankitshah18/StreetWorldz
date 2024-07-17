@@ -1,7 +1,6 @@
 .donation {
   margin: 80px auto;
   width: 100%;
-  /* text-align: center; */
   padding: 1rem;
   background-color: #e1feff;
 }
@@ -17,12 +16,10 @@
 .donation h3 {
   font-weight: 200;
   font-weight: 28px;
-  /* color: #212ea0; */
 }
 .donation h2 {
   font-size: 35px;
   color: #000f38;
-  /* margin: 10px 0; */
   max-width: 400px;
 }
 
@@ -149,5 +146,21 @@
   .gallery img {
     width: 100%;
     margin-bottom: 25px;
+  }
+  .donation-cards-container {
+    display: flex;
+    overflow-x: scroll; 
+    white-space: nowrap; 
+    -webkit-overflow-scrolling: touch; 
+    gap: 1rem; 
+  }
+  
+  .donation-card-one,
+  .donation-card-two,
+  .donation-card-three,
+  .donation-card-four {
+    width: 80%;
+    display: inline-block; 
+    margin-right: 1rem; 
   }
 }
