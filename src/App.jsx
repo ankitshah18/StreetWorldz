@@ -5,7 +5,7 @@ import Programs from "./Components/Programs/Programs";
 import Title from "./Components/Title/Title";
 import About from "./Components/About/About";
 import Campus from "./Components/Campus/Campus";
-import Testimonials from "./Components/Testimonials/Testimonials";
+import Donations from "./Components/Donation/Donations";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
@@ -22,7 +22,7 @@ const App = () => {
       {/* <Programs/> */}
       <About setPlayState={setPlayState} />
       <Campus />
-      <Testimonials />
+      <Donations />
       <div className="container">
         {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
 
