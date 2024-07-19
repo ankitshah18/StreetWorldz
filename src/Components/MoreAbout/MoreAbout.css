@@ -1,0 +1,189 @@
+.about-container {
+  display: flex;
+  flex-direction: row;
+  height: 80rem;
+  margin-top: 4rem;
+  position: relative;
+}
+.section-1 {
+  background-color: #fbeed6;
+  width: 40%;
+}
+
+.section-2 {
+  background-color: #e8e8e8;
+  overflow: hidden;
+  width: 70%;
+  position: relative;
+}
+.about_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1); /* Zoom in the image */
+  /* object-position: 8ch 1em; */
+  object-position: center;
+  filter: grayscale();
+  /* Adjust the position of the image */
+}
+.section_three_container {
+  height: 100%;
+}
+.section-3 {
+  position: absolute; /* Position this element absolutely within .about-container */
+  top: 50%; /* Adjust top as needed */
+  left: 30%; /* Adjust left as needed */
+  transform: translate(-50%, -50%); /* Center the element */
+  background-color: white; /* Add a background with some opacity */
+  padding: 1rem;
+  width: 50rem;
+  height: 70rem;
+
+  z-index: 10; /* Ensure it appears above other sections */
+}
+.section_three_heading {
+  padding: 1rem;
+}
+.section_three_content {
+  gap: 2rem;
+}
+.about_content {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* @media (max-width: 840px) {
+  .about_img {
+    display: none;
+  }
+  .section-1 {
+    display: none;
+  }
+  .section-2 {
+    display: none;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about_content {
+    font-size: 1rem;
+  }
+
+  .section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 1000px;
+  }
+} */
+
+@media (max-width: 840px) {
+  .about_img {
+    display: none;
+  }
+  .section-1 {
+    display: none;
+  }
+  .section-2 {
+    display: none;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make sure the container takes full height */
+  }
+  .section-3 {
+    position: static; /* Reset positioning */
+    transform: none; /* Reset transform */
+    width: 90%; /* Make it responsive */
+    max-width: 650px; /* Ensure max width */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Slightly more opaque for better readability */
+    padding: 2rem; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  .about_content {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1419px) {
+  .about_img {
+    display: none;
+  }
+  .section-1 {
+    display: none;
+  }
+  .section-2 {
+    display: none;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make sure the container takes full height */
+  }
+  .section-3 {
+    /* background: url("../../assets/dogOne.jpg"); */
+    background: url("../../assets/dogOne.jpg") no-repeat center center;
+    background-size: cover;
+    position: static; /* Reset positioning */
+
+    transform: none; /* Reset transform */
+    width: 90%; /* Make it responsive */
+    max-width: 650px; /* Ensure max width */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: rgb(
+      255,
+      255,
+      255
+    ); /* Slightly more opaque for better readability */
+    padding: 2rem; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    z-index: 0;
+  }
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 10px;
+  }
+}
