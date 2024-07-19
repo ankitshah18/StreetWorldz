@@ -9,7 +9,6 @@ import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
 import Stories from "./Components/SuccessStories/SuccessStories";
 import Donations from "./Components/Donation/Donations";
 import { Route, Routes } from "react-router-dom";
-import Blog from "./Components/Blog/Blog";
 import MoreAbout from "./Components/MoreAbout/MoreAbout";
 
 const App = () => {
