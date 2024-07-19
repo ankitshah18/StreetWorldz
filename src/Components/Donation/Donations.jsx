@@ -64,7 +64,8 @@ const Donations = () => {
           medical attention they require.
         </h5>
         <button className="btn">
-          <FaRegHeart /> Donate Now
+          <FaRegHeart />
+          Donate Now
         </button>
       </div>
     </div>
