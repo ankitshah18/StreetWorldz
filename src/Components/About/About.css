@@ -115,4 +115,7 @@
   .box {
     margin: auto;
   }
+  .about iframe {
+    height: 250px;
+  }
 }
