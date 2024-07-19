@@ -7,7 +7,8 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
 import Stories from "./Components/SuccessStories/SuccessStories";
-import Donations from "./Components/Donation/Donations";
+import Donations from "./Components/Donations/Donations";
+import Campaign from "./Components/campaign/Campaign";
 
 
 const App = () => {
@@ -21,9 +22,9 @@ const App = () => {
       {/* <Title subTitle="Our PROGRAM" title="What We Offer" /> */}
       {/* <Programs/> */}
       <About setPlayState={setPlayState} />
-      
-      <Stories />
+      <Campaign />
       <Donations />
+      <Stories />
       <div className="container">
         {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
 
