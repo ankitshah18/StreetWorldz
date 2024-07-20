@@ -3,6 +3,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -23,7 +24,13 @@ const Navbar = () => {
       <img src={logo} alt="" className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
-          <Link to="/" smooth={true} offset={0} duration={500}>
+          <Link
+            to="/"
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={toggleMenu}
+          >
             Home
           </Link>
         </li>
@@ -38,7 +45,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/aboutus" smooth={true} offset={-150} duration={500}>
+          <Link
+            to="/aboutus"
+            smooth={true}
+            offset={-150}
+            duration={500}
+            onClick={toggleMenu}
+          >
             About us
           </Link>
         </li>
@@ -69,7 +82,8 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
+      <RxHamburgerMenu className="menu-icon" onClick={toggleMenu} />
+      {/* <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} /> */}
     </nav>
   );
 };

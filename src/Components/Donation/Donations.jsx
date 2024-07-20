@@ -44,9 +44,14 @@ const Donations = () => {
                 <div className="user-info">
                   <img src={slide.img} alt={slide.title} />
                 </div>
+
                 <div className="text">
                   <h2>{slide.title}</h2>
                   <p>{slide.text}</p>
+                  <button className="btn_outline">
+                    <FaRegHeart />
+                    Donate Now
+                  </button>
                 </div>
               </div>
             </li>

@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer container">
       <p>© 2024 stree-worldz. All rights reserved.</p>
 
       <ul>

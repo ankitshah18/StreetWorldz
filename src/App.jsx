@@ -8,12 +8,16 @@ import Footer from "./Components/Footer/Footer";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
 import Stories from "./Components/SuccessStories/SuccessStories";
 import Donations from "./Components/Donation/Donations";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Blog from "./Components/Blog/Blog";
 import MoreAbout from "./Components/MoreAbout/MoreAbout";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
+  const location = useLocation();
+  const isAboutUsPage = location.pathname === "/aboutus";
+  // console.log("aboutus", location.pathname);
 
   return (
     <div>
@@ -36,7 +40,6 @@ const App = () => {
 
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact />
-                <Footer />
               </div>
               <VideoPlayer playState={playState} setPlayState={setPlayState} />
             </>
@@ -49,17 +52,15 @@ const App = () => {
           path="/aboutus"
           element={
             <>
-              <Hero />
+              {/* <Hero additionalClass={isAboutUsPage ? "aboutus-hero" : ""} /> */}
 
               <MoreAbout />
-              <div className="container">
-                {" "}
-                <Footer />
-              </div>
+              <div className="container"> {/* <Footer /> */}</div>
             </>
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 };

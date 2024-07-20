@@ -7,12 +7,23 @@
   background-size: cover;
   height: 60vh;
   gap: 1rem;
+  overflow: hidden; /* Ensure the blur effect doesn't overflow */
 }
 
+.Donations::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(2px); /* Adjust the blur intensity */
+  z-index: -1; /* Ensure the blur effect stays behind the content */
+}
 .slider {
   width: 60%;
   overflow: hidden;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -33,11 +44,11 @@
 .slide {
   display: flex;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 10px;
   color: #676767;
   line-height: 1.4;
-  height: 70%; /* Ensure the slide takes full height */
+  height: auto; /* Ensure the slide takes full height */
   gap: 1rem;
   background-color: white;
 }
@@ -46,24 +57,26 @@
   display: flex;
   align-items: center;
   width: 50%; /* Take 50% of the slide width */
-  height: 100%; /* Take full height of the slide */
+  height: auto; /* Take full height of the slide */
 }
 
 .user-info img {
   width: 100%; /* Full width within the 50% left side */
   height: 100%; /* Maintain aspect ratio */
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
   object-fit: cover;
 }
 
 .text {
   width: 50%; /* Take 50% of the slide width */
   margin: 0; /* Remove default margin */
+  padding: 5px;
 }
 .text p {
   height: auto;
   overflow: auto;
   font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 
 .dots {
@@ -146,22 +159,24 @@
 }
 
 /* ------- media query ------------- */
+
+/* ------- media query ------------- */
 @media (max-width: 800px) {
   .Donations {
     padding: 0 40px;
     flex-direction: column; /* Stack elements vertically */
-    height: 95vh;
+    height: auto; /* Adjust height for vertical layout */
   }
 
   .content {
     order: 1; /* Display content first */
     width: 100%;
+    margin-bottom: 20px; /* Space between content and slider */
   }
 
   .slider {
     order: 2; /* Display slider second */
     width: 100%; /* Full width in vertical layout */
-    margin-bottom: 20px; /* Space between slider and content */
   }
 
   .slider ul li {
@@ -170,31 +185,49 @@
 
   .slide {
     padding: 10px;
-    flex-direction: column; /* Stack elements vertically */
-    height: 100%; /* Adjust height for vertical layout */
+    height: auto; /* Adjust height for vertical layout */
+    display: flex;
+    flex-direction: column;
   }
 
   .user-info {
     width: 100%; /* Full width in vertical layout */
-    height: 50%; /* Take 50% height in vertical layout */
+    height: auto; /* Adjust height for vertical layout */
     margin-bottom: 10px; /* Space between image and text */
   }
 
   .user-info img {
     width: 100%; /* Full width in vertical layout */
-    height: 100%; /* Full height in vertical layout */
+    height: 250px; /* Maintain aspect ratio */
     margin: 0 0 10px 0; /* Space below the image */
+    border-radius: 0;
+    object-position: center;
   }
 
   .text {
     width: 100%; /* Full width in vertical layout */
-    height: 50%; /* Take 50% height in vertical layout */
+    height: auto; /* Adjust height for vertical layout */
+  }
+
+  .text h2 {
+    font-size: 1rem; /* Adjust font size */
+    margin-bottom: 0.5rem; /* Add margin */
+  }
+
+  .text p {
+    font-size: 0.8rem; /* Adjust font size */
+    margin-bottom: 1rem; /* Add margin */
+  }
+
+  .text button {
+    width: 100%; /* Full width in vertical layout */
+    padding: 0.5rem; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 600px) {
   .user-info {
-    display: block;
     font-size: 12px;
   }
 

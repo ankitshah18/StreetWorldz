@@ -36,6 +36,18 @@ a {
   align-items: center;
   justify-content: center;
 }
+.btn_outline {
+  border: 1px solid#1bb7bc;
+  background-color: white;
+  color: #1bb7bc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  gap: 0.5rem;
+  font-weight: 600;
+}
 
 .btn-small {
   background: #1bb7bc;

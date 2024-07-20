@@ -28,6 +28,7 @@ nav ul li {
 }
 .menu-icon {
   display: none;
+  color: black;
 }
 /* ----- media query ----------- */
 
@@ -50,7 +51,7 @@ nav ul li {
     bottom: 0;
     background: #212ea0;
     z-index: -1;
-    width: 200px;
+    width: 100%;
     padding-top: 70px;
     transition: 0.5s;
   }
@@ -62,8 +63,9 @@ nav ul li {
     display: block;
     width: 30px;
     cursor: pointer;
+    height: 2rem;
   }
   .hide-mobile-menu {
-    right: -200px;
+    right: -100%;
   }
 }
