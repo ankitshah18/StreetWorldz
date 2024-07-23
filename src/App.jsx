@@ -11,16 +11,18 @@ import Donations from "./Components/Donation/Donations";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Blog from "./Components/Blog/Blog";
 import MoreAbout from "./Components/MoreAbout/MoreAbout";
+import Rescue from "./Components/Rescue/Rescue";
+import Campaign from "./Components/Campaign/Campaign";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
   const location = useLocation();
-  const isAboutUsPage = location.pathname === "/aboutus";
+
   // console.log("aboutus", location.pathname);
 
   return (
-    <div>
+    <div className="main-content">
       <Navbar />
 
       <Routes>
@@ -30,9 +32,12 @@ const App = () => {
             <>
               <Hero />
               <About setPlayState={setPlayState} />
+              <Campaign />
 
-              <Stories />
               <Donations />
+              <Stories />
+
+              {/* <Stories /> */}
               <div className="container">
                 {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
 
@@ -41,6 +46,7 @@ const App = () => {
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact />
               </div>
+              <Footer />
               <VideoPlayer playState={playState} setPlayState={setPlayState} />
             </>
           }
@@ -59,8 +65,15 @@ const App = () => {
             </>
           }
         />
+        <Route
+          path="/rescue"
+          element={
+            <>
+              <Rescue />
+            </>
+          }
+        />
       </Routes>
-      <Footer />
     </div>
   );
 };

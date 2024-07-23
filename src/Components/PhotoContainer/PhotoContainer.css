@@ -1,0 +1,43 @@
+.photo {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(40%); /* Convert the photo to grayscale */
+}
+
+.photo-text {
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.photo-text h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10rem;
+  width: 100%;
+}
+
+@media (max-width: 1156px) {
+  .photo-text h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .photo-text h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .photo-text h1 {
+    font-size: 30px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}

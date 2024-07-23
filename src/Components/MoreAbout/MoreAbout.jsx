@@ -1,15 +1,18 @@
 import React from "react";
 import "./MoreAbout.css";
 import about_img from "../../assets/dogOne.jpg";
+import PhotoContainer from "../PhotoContainer/PhotoContainer";
+import cat from "../../assets/Cat.jpg";
 const MoreAbout = () => {
   return (
     <>
       {" "}
-      <div className="photo container">
+      <PhotoContainer image={cat} text="Who we are" minHeight="30vh" />
+      {/* <div className="photo container">
         <div className="photo-text">
           <h1>Who we are</h1>
         </div>
-      </div>
+      </div> */}
       <div className="about-container container">
         <div className="section-1">
           {" "}

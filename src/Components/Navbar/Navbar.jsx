@@ -4,6 +4,8 @@ import logo from "../../assets/logo.png";
 import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { GiSittingDog } from "react-icons/gi";
+import { LuDog } from "react-icons/lu";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -21,7 +23,8 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <img src={logo} alt="" className="logo" />
+      {/* <img src={logo} alt="" className="logo" /> */}
+      <GiSittingDog className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link
@@ -41,7 +44,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/rescue" smooth={true} offset={-260} duration={500}>
-            Request Rescue
+            Rescue
           </Link>
         </li>
         <li>
@@ -78,7 +81,8 @@ const Navbar = () => {
             duration={500}
             className="btn"
           >
-            Contact us
+            <LuDog />
+            Donate
           </Link>
         </li>
       </ul>
