@@ -149,18 +149,18 @@
   }
   .campaign-cards-container {
     display: flex;
-    overflow-x: scroll; 
-    white-space: nowrap; 
-    -webkit-overflow-scrolling: touch; 
-    gap: 1rem; 
+    overflow-x: scroll;
+    white-space: nowrap;
+    /* -webkit-overflow-scrolling: touch; */
+    gap: 1rem;
   }
-  
+
   .campaign-card-one,
   .campaign-card-two,
   .campaign-card-three,
   .campaign-card-four {
     width: 80%;
-    display: inline-block; 
-    margin-right: 1rem; 
+    display: inline-block;
+    margin-right: 1rem;
   }
 }
