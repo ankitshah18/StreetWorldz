@@ -1,0 +1,283 @@
+.about-container {
+  display: flex;
+  flex-direction: row;
+  /* height: 85vh;
+  width: 75vw; */
+  margin: 2rem auto; /* Center horizontally and add top/bottom margin */
+}
+
+.section-1 {
+  width: 50%;
+}
+
+.section-1 img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.section-2 {
+  background-color: #333333;
+  width: 50%;
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+  z-index: 10;
+  right: 10%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  object-position: center;
+  filter: grayscale();
+}
+
+.section_three_container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.section_three_heading {
+  padding: 1rem;
+  font-size: 2rem;
+}
+.section_three_heading h2 {
+  font-size: 2.5rem;
+}
+.section_three_heading p {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.section_three_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+  overflow: auto; /* Ensure no overflow */
+  /* text-align: justify; */
+}
+
+.about_content {
+  /* padding: 1rem; */
+  font-size: 1rem;
+  /* margin-top: 1rem; */
+  flex-shrink: 1; /* Ensure text adjusts within the container */
+  word-wrap: break-word; /* Break long words */
+  text-align: justify;
+}
+
+@media (max-width: 1419px) {
+  .about_img {
+    display: none;
+  }
+
+  .section-1 {
+    display: none;
+  }
+
+  .section-2 {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .section-3 {
+    background: url("../../assets/dogOne.jpg") no-repeat center center;
+    background-size: cover;
+    position: static;
+    transform: none;
+    width: 90%;
+    max-width: 650px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+  }
+
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .about_img {
+    display: none;
+  }
+
+  .section-1 {
+    display: none;
+  }
+
+  .section-2 {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .section-3 {
+    position: static;
+    transform: none;
+    width: 90%;
+    max-width: 650px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about_content {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+  }
+}
+
+/* @media (max-width: 840px) {
+  .about_img {
+    display: none;
+  }
+  .section-1 {
+    display: none;
+  }
+  .section-2 {
+    display: none;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about_content {
+    font-size: 1rem;
+  }
+
+  .section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 1000px;
+  }
+} */
+
+.photo {
+  width: 100%;
+  min-height: 30vh;
+  background: url("../../assets/Cat.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(40%); /* Convert the photo to grayscale */
+}
+
+.photo-text {
+  /* text-align: center;    */
+  /* margin-left: 8%; */
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+.photo-text h1 {
+  font-size: 30px;
+  font-weight: 600;
+  /* margin-bottom: 0.7rem; */
+  margin-top: 10rem;
+  width: 100%;
+}
+.photo-text p {
+  max-width: 80%;
+  /* margin: 10px auto 20px; */
+
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+}
+/* ---------- media query --------- */
+@media (max-width: 1156px) {
+  .photo-text h1 {
+    font-size: 40px;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+  .hero {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 850px) {
+  .photo-text h1 {
+    font-size: 40px;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+}
+@media (max-width: 650px) {
+  .photo-text h1 {
+    font-size: 30px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+  .photo-text p {
+    font-size: 14px;
+    /* margin: 15px auto 30px; */
+  }
+}
+
+.aboutus-hero {
+  /* Your specific styles for AboutUs page */
+  height: 30vh;
+}

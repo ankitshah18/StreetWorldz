@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-text">
         <p>Help, Donate & Fundraise</p>
         <h1>Your Contribution Is Important</h1>
-        <button className="btn">
+        <button className="btn" style={{ width: "60%" }}>
           <FaRegHeart />
           Donate Now
         </button>
