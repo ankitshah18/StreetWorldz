@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSittingDog } from "react-icons/gi";
 import { LuDog } from "react-icons/lu";
->>>>>>> d5a5c9f7fa9a566b7a472473d80dc18d5380d578
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -26,12 +21,6 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-<<<<<<< HEAD
-      <img src={logo} alt="" className="logo" />
-      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
-        <li>
-          <Link to="/" smooth={true} offset={0} duration={500}>
-=======
       {/* <img src={logo} alt="" className="logo" /> */}
       <GiSittingDog className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
@@ -43,7 +32,6 @@ const Navbar = () => {
             duration={500}
             onClick={toggleMenu}
           >
->>>>>>> d5a5c9f7fa9a566b7a472473d80dc18d5380d578
             Home
           </Link>
         </li>
@@ -54,13 +42,6 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/rescue" smooth={true} offset={-260} duration={500}>
-<<<<<<< HEAD
-            Request Rescue
-          </Link>
-        </li>
-        <li>
-          <Link to="/aboutus" smooth={true} offset={-150} duration={500}>
-=======
             Rescue
           </Link>
         </li>
@@ -72,7 +53,6 @@ const Navbar = () => {
             duration={500}
             onClick={toggleMenu}
           >
->>>>>>> d5a5c9f7fa9a566b7a472473d80dc18d5380d578
             About us
           </Link>
         </li>
@@ -99,13 +79,6 @@ const Navbar = () => {
             duration={500}
             className="btn"
           >
-<<<<<<< HEAD
-            Contact us
-          </Link>
-        </li>
-      </ul>
-      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
-=======
             <LuDog />
             Donate
           </Link>
@@ -113,7 +86,6 @@ const Navbar = () => {
       </ul>
       <RxHamburgerMenu className="menu-icon" onClick={toggleMenu} />
       {/* <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} /> */}
->>>>>>> d5a5c9f7fa9a566b7a472473d80dc18d5380d578
     </nav>
   );
 };
