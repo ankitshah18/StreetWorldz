@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Inspiration.css";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 import cat from "../../assets/Cat.jpg";
-import dog from "../../assets/dogOne.jpg";
+// import dog from "../../assets/dogOne.jpg";
 
 const Inspiration = () => {
   const [isEnglish, setIsEnglish] = useState(false);
