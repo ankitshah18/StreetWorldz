@@ -74,14 +74,14 @@ const App = () => {
             </>
           }
         />
-        {/* <Route
+        <Route
           path="/zaalim"
           element={
             <>
               <Inspiration />
             </>
           }
-        /> */}
+        />
       </Routes>
     </div>
   );
