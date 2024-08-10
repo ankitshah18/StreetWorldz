@@ -93,7 +93,7 @@
   font-size: 1.5rem;
 }
 /* ------- media query ------------- */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .about {
     flex-direction: column;
   }
@@ -101,6 +101,11 @@
     flex-basis: 100%;
     margin: 20px;
     order: 2;
+  }
+  .about p {
+    text-align: justify;
+    padding: 5px;
+    margin: 5px;
   }
   .about-right {
     flex-basis: 100%;
