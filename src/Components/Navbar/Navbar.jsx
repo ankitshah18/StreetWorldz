@@ -68,7 +68,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/gallery" smooth={true} offset={-260} duration={500}>
-            What we can
+            What we need
           </Link>
         </li>
         <li>
@@ -103,7 +103,6 @@ const Navbar = () => {
             <LuDog />
             Donate
           </Link>
-
         </li>
       </ul>
       <RxHamburgerMenu className="menu-icon" onClick={toggleMenu} />
