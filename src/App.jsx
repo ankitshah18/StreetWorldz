@@ -13,7 +13,7 @@ import Blog from "./Components/Blog/Blog";
 import MoreAbout from "./Components/MoreAbout/MoreAbout";
 import Rescue from "./Components/Rescue/Rescue";
 import Campaign from "./Components/Campaign/Campaign";
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const App = () => {
   const [playState, setPlayState] = useState(false);

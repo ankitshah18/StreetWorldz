@@ -62,6 +62,16 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+            What we do
+          </Link>
+        </li>
+        <li>
+          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+            What we can
+          </Link>
+        </li>
+        <li>
           <Link to="/blog" smooth={true} offset={-260} duration={500}>
             Blog
           </Link>
@@ -81,6 +91,19 @@ const Navbar = () => {
           >
             <LuDog />
             Donate
+          </Link>
+
+        </li>
+        <li>
+        <Link
+            to="/contact"
+            smooth={true}
+            offset={-260}
+            duration={500}
+            className="btn"
+          >
+            <LuDog />
+            Join Volunteer
           </Link>
         </li>
       </ul>
