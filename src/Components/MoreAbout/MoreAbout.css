@@ -81,52 +81,17 @@
   text-align: justify;
 }
 
-@media (max-width: 1419px) {
-  .about_img {
-    display: none;
-  }
-
-  .section-1 {
-    display: none;
-  }
-
-  .section-2 {
-    display: none;
-  }
-
+@media (max-width: 840px) {
   .about-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-
-  .section-3 {
+    width: 85%;
+    border-radius: 1rem;
     background: url("../../assets/dogOne.jpg") no-repeat center center;
     background-size: cover;
-    position: static;
-    transform: none;
-    width: 90%;
-    max-width: 650px;
-    height: auto;
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 0;
-  }
-
-  .about_content {
-    padding: 0;
-    width: 100%;
-    height: auto;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 840px) {
-  .about_img {
-    display: none;
   }
 
   .section-1 {
@@ -134,26 +99,21 @@
   }
 
   .section-2 {
-    display: none;
-  }
-
-  .about-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-  }
-
-  .section-3 {
-    position: static;
-    transform: none;
+    align-items: center;
     width: 90%;
-    max-width: 650px;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    max-height: 80vh; /* Fixed height for section-2 */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 2rem;
+    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents overflow */
   }
 
   .about_content {
@@ -161,15 +121,77 @@
     width: 100%;
     height: auto;
     font-size: 14px;
+    color: #fff; /* Ensure text is readable on dark background */
+  }
+
+  .section_three_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto; /* Enables scrolling if content exceeds height */
+    max-height: calc(
+      80vh - 4rem
+    ); /* Adjusted to fit within section-2's max height */
   }
 }
 
 @media (max-width: 500px) {
+  .about-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 85%;
+    border-radius: 1rem;
+    background: url("../../assets/dogOne.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .section-1 {
+    display: none;
+  }
+
+  .section-2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-height: 88vh; /* Fixed height for section-2 */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content overflow */
+  }
+
   .about_content {
     padding: 0;
     width: 100%;
     height: auto;
-    font-size: 10px;
+    font-size: 14px;
+    color: #fff; /* Ensure text is readable on dark background */
+  }
+
+  .section_three_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    width: 100%; /* Ensure it fits within the container */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds container height */
+    max-height: calc(
+      80vh - 4rem
+    ); /* Adjust to fit within section-2's max height */
   }
 }
 
@@ -206,78 +228,3 @@
     height: 1000px;
   }
 } */
-
-.photo {
-  width: 100%;
-  min-height: 30vh;
-  background: url("../../assets/Cat.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: grayscale(40%); /* Convert the photo to grayscale */
-}
-
-.photo-text {
-  /* text-align: center;    */
-  /* margin-left: 8%; */
-  max-width: 100%;
-  font-family: "Poppins", sans-serif;
-}
-.photo-text h1 {
-  font-size: 30px;
-  font-weight: 600;
-  /* margin-bottom: 0.7rem; */
-  margin-top: 10rem;
-  width: 100%;
-}
-.photo-text p {
-  max-width: 80%;
-  /* margin: 10px auto 20px; */
-
-  margin-bottom: 0.7rem;
-  line-height: 1.4;
-}
-/* ---------- media query --------- */
-@media (max-width: 1156px) {
-  .photo-text h1 {
-    font-size: 40px;
-  }
-  .hero {
-    min-height: 60vh;
-  }
-  .hero {
-    min-height: 50vh;
-  }
-}
-
-@media (max-width: 850px) {
-  .photo-text h1 {
-    font-size: 40px;
-  }
-  .hero {
-    min-height: 60vh;
-  }
-}
-@media (max-width: 650px) {
-  .photo-text h1 {
-    font-size: 30px;
-    max-width: 400px;
-    margin: auto;
-    margin-bottom: 1rem;
-  }
-  .hero {
-    min-height: 60vh;
-  }
-  .photo-text p {
-    font-size: 14px;
-    /* margin: 15px auto 30px; */
-  }
-}
-
-.aboutus-hero {
-  /* Your specific styles for AboutUs page */
-  height: 30vh;
-}

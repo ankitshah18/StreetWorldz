@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=MonteCarlo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=MonteCarlo&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=MonteCarlo&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap");
+/* .inspiration-container {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 4rem auto;
+  width: 70vw;
+  height: 80vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inspiration-container h2 {
+  width: 100%;
+  height: 10vh;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.inspiration-container p {
+  margin: 4rem auto;
+  text-align: center;
+  width: 80%;
+  text-align: justify;
+  height: 100%;
+} */
+.inspiration-container {
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 4rem auto;
+  width: 70vw;
+  height: 80vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide any overflow from the pseudo-element */
+}
+
+.inspiration-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/dogOne.jpg") no-repeat center center;
+  background-size: cover;
+
+  filter: grayscale(100%) blur(3px); /* Apply grayscale and blur effect */
+  z-index: 1; /* Position behind the text */
+}
+
+.inspiration-container h2,
+.inspiration-container p,
+.inspiration-container button {
+  position: relative; /* Ensure they are above the pseudo-element */
+  z-index: 2; /* Ensure they are above the blurred background */
+  color: rgb(70, 72, 73); /* Adjust the text color for better readability */
+}
+
+.inspiration-container h2 {
+  width: 100%;
+  height: 10%;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.inspiration-container p {
+  margin: 1rem auto;
+  width: 95%;
+  text-align: justify;
+  overflow-y: auto;
+  flex-grow: 1;
+  line-height: 2.5rem;
+  font-family: "Satisfy", cursive;
+  font-weight: 300;
+  word-spacing: 5px;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.inspiration-container button {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.inspiration-container button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 840px) {
+  .inspiration-container {
+    width: 90vw;
+  }
+
+  .inspiration-container h2 {
+    font-size: 2rem;
+  }
+
+  .inspiration-container p {
+    width: 90%;
+  }
+}

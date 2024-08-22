@@ -13,7 +13,8 @@ import Blog from "./Components/Blog/Blog";
 import MoreAbout from "./Components/MoreAbout/MoreAbout";
 import Rescue from "./Components/Rescue/Rescue";
 import Campaign from "./Components/Campaign/Campaign";
-
+import Inspiration from "./Components/Inspiration/Inspiration";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
@@ -70,6 +71,14 @@ const App = () => {
           element={
             <>
               <Rescue />
+            </>
+          }
+        />
+        <Route
+          path="/zaalim"
+          element={
+            <>
+              <Inspiration />
             </>
           }
         />

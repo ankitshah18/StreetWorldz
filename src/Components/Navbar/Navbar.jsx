@@ -77,7 +77,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/zaalim" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="/zaalim"
+            smooth={true}
+            offset={-260}
+            duration={500}
+            onClick={toggleMenu}
+          >
             Inspiration
           </Link>
         </li>
