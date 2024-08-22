@@ -82,6 +82,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/blog" smooth={true} offset={-260} duration={500}>
+            Join
+          </Link>
+        </li>
+        <li>
           <Link
             to="/contact"
             smooth={true}
@@ -93,18 +98,6 @@ const Navbar = () => {
             Donate
           </Link>
 
-        </li>
-        <li>
-        <Link
-            to="/contact"
-            smooth={true}
-            offset={-260}
-            duration={500}
-            className="btn"
-          >
-            <LuDog />
-            Join Volunteer
-          </Link>
         </li>
       </ul>
       <RxHamburgerMenu className="menu-icon" onClick={toggleMenu} />
