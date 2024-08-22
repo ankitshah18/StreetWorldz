@@ -22,7 +22,7 @@ const About = ({ setPlayState }) => {
             specializes in rescuing, treating, and sheltering these vulnerable
             animals, giving them a second chance at a happy and healthy life.
           </p>
-          <button className="btn-small">About Us</button>
+          <button className="btn-small">More About Us</button>
         </div>
         <div className="about-left">
           <iframe

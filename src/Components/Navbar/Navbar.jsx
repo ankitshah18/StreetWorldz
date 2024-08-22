@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSittingDog } from "react-icons/gi";
@@ -64,6 +62,16 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+            What we do
+          </Link>
+        </li>
+        <li>
+          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+            What we can
+          </Link>
+        </li>
+        <li>
           <Link to="/blog" smooth={true} offset={-260} duration={500}>
             Blog
           </Link>
@@ -80,6 +88,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/blog" smooth={true} offset={-260} duration={500}>
+            Join
+          </Link>
+        </li>
+        <li>
           <Link
             to="/contact"
             smooth={true}
@@ -90,6 +103,7 @@ const Navbar = () => {
             <LuDog />
             Donate
           </Link>
+
         </li>
       </ul>
       <RxHamburgerMenu className="menu-icon" onClick={toggleMenu} />
