@@ -1,0 +1,64 @@
+/* Gallery.css */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes full viewport height */
+}
+
+.gallery-container > *:first-child {
+  flex-grow: 0; /* Ensures the PhotoContainer stays at the top */
+}
+
+.cards {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adds space between each card */
+  padding: 20px;
+  background-color: white;
+  flex-wrap: wrap; /* Allows wrapping to a new line if necessary */
+}
+
+.cards > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 295px; /* Set a fixed width for all cards */
+  height: 333px; /* Set a fixed height for all cards */
+
+  border-radius: 8px; /* Optional: adds rounded corners */
+  overflow: hidden; /* Ensures the image doesn't overflow the card */
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 4px 0px rgba(94, 94, 94, 0.5);
+  padding: 15px;
+}
+
+.cards img {
+  width: 100%;
+  height: 300px; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the entire width of the card without stretching */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for the transform */
+  border-radius: 8px;
+}
+
+.cards h4 {
+  margin: 10px 0; /* Adds some space above and below the title */
+  font-size: 16px;
+  color: #333; /* Optional: sets the color of the title text */
+}
+.cards h4:hover {
+  color: #1bb7bc;
+}
+.cards > div:hover h4 {
+  color: #1bb7bc; /* Change color of <h4> when hovering over the parent <div> */
+}
+
+.cards > div:hover img {
+  transform: scale(1.05); /* Moves the image slightly upwards */
+}
+footer {
+  flex-grow: 0; /* Ensures the footer stays at the bottom */
+}

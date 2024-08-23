@@ -62,12 +62,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+          <Link to="/whatwedo" smooth={true} offset={-260} duration={500}>
             What we do
           </Link>
         </li>
         <li>
-          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+          <Link to="/whatweneed" smooth={true} offset={-260} duration={500}>
             What we need
           </Link>
         </li>

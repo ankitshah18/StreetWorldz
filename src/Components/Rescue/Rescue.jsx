@@ -176,7 +176,9 @@ const Rescue = () => {
               value={formData.details}
               onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
           </form>
         </div>
       </div>
