@@ -16,7 +16,7 @@
   align-items: center;
   gap: 20px; /* Adds space between each card */
   padding: 20px;
-  background-color: white;
+  background-color: #efefef;
   flex-wrap: wrap; /* Allows wrapping to a new line if necessary */
 }
 

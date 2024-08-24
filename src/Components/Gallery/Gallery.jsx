@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import camel_one from "../../assets/camel_one.jpg";
 import cow from "../../assets/cowtwo.jpg";
 import dog from "../../assets/dog-1.jpg";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   return (
@@ -17,7 +18,9 @@ const Gallery = () => {
         <div className="cards">
           <div className="camel_card">
             <img src={camel_one} alt="" />
-            <h4>Camels</h4>
+            <Link to="/gallery/camels">
+              <h4>Camels</h4>
+            </Link>
           </div>
           <div className="cat_card">
             <img src={cat} alt="" />

@@ -15,6 +15,7 @@ import Rescue from "./Components/Rescue/Rescue";
 import Campaign from "./Components/Campaign/Campaign";
 import Inspiration from "./Components/Inspiration/Inspiration";
 import Gallery from "./Components/Gallery/Gallery";
+import Camels from "./Components/Gallery/Camels";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -88,6 +89,14 @@ const App = () => {
           element={
             <>
               <Gallery />
+            </>
+          }
+        />
+        <Route
+          path="/gallery/camels"
+          element={
+            <>
+              <Camels />
             </>
           }
         />
