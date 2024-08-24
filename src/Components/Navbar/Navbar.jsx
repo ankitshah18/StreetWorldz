@@ -36,8 +36,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/donate" smooth={true} offset={-260} duration={500}>
-            Donate
+          <Link to="/contact" smooth={true} offset={-260} duration={500}>
+            Contact Us
           </Link>
         </li>
         <li>
@@ -62,12 +62,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+          <Link to="/doing" smooth={true} offset={-260} duration={500}>
             What we do
           </Link>
         </li>
         <li>
-          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+          <Link to="/need" smooth={true} offset={-260} duration={500}>
             What we need
           </Link>
         </li>
