@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./PhotoContainer.css";
 
-const PhotoContainer = ({ image, text, minHeight }) => {
+const PhotoContainer = ({ image, text, minHeight, ...args }) => {
   console.log(image);
   const containerStyle = {
     backgroundImage: `url(${image})`,
     minHeight: minHeight,
+    ...args,
   };
 
   return (

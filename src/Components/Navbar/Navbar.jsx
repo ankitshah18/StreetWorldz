@@ -66,11 +66,11 @@ const Navbar = () => {
             What we do
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/whatweneed" smooth={true} offset={-260} duration={500}>
             What we need
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/blog" smooth={true} offset={-260} duration={500}>
             Blog
@@ -92,6 +92,7 @@ const Navbar = () => {
             Join
           </Link>
         </li>
+
         <li>
           <Link
             to="/contact"
