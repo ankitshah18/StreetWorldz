@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Inspiration.css";
-import PhotoContainer from "../PhotoContainer/PhotoContainer";
+
+import Footer from "../Footer/Footer";
 import cat from "../../assets/Cat.jpg";
 // import dog from "../../assets/dogOne.jpg";
 
@@ -12,18 +13,20 @@ const Inspiration = () => {
   const englishText = `Zaalim was one of my rescues whom I rescued in 2021 due to a hit and run incident. The poor thing was paralyzed. At that time, my shelter was being built and I had no space at home, so I kept him in another shelter. He recovered and came to me after 2 months. He was fine, but one of his legs was damaged due to the accident. He didn't trust any humans. We tried hard, but he became a little friendly. Then I kept him near my house in my area. He always wanted to stay with me. Wherever I went, he wanted to go along, even if it was a rescue. Whether it was 3 AM or 10 AM, he would rush to me when called—'Where is Zaalim?' In the alley, he would sneak up on people and bite them, thinking someone was going to hurt him. Many people would call him to their shop and beat him. Everything was fine until one day, everything changed. On July 12th, he suddenly left everything. On July 10th, I had an accident where I almost lost my life, but somehow, it felt like someone saved me. When I got home, I found out that Zaalim’s health suddenly worsened. We took him to the hospital at 2 AM, and the doctor said he had jaundice. Zaalim was fine, but after my accident, everything changed. We tried hard, but he couldn’t survive. He left me on July 12th at 7:45. After his passing, I thought I would leave everything behind; I couldn’t do it anymore. But one week after his death, he came into my dream and said, 'Do all this for me, in my name. Keep me in your memories.'`;
 
   return (
-    <>
-      <PhotoContainer image={cat} text="Inspiration" minHeight="17vh" />
-      <div className="inspiration-container">
-        <h2 className="inspiration-heading">Zaalim</h2>
-        <p className="inspiration-content">
-          {isEnglish ? englishText : hinglishText}
-        </p>
-        <button onClick={() => setIsEnglish(!isEnglish)}>
-          {isEnglish ? "Read in Hinglish" : "Read in English"}
-        </button>
+    <div className="inspiration-main-container">
+      <div className="image-container">
+        <div className="inspiration-container">
+          <h2 className="inspiration-heading">Zaalim</h2>
+          <p className="inspiration-content">
+            {isEnglish ? englishText : hinglishText}
+          </p>
+          <button onClick={() => setIsEnglish(!isEnglish)}>
+            {isEnglish ? "Read in Hinglish" : "Read in English"}
+          </button>
+        </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 
