@@ -1,0 +1,141 @@
+.more_contact {
+  margin: 80px auto;
+  max-width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+
+.contact-bottom {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.more_contact-col {
+  flex-basis: 48%;
+  color: #676767;
+  margin-bottom: 20px; /* Add space between columns on small screens */
+}
+
+.more_contact-col h3 {
+  color: #000F38;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.more_contact-col h3 img {
+  width: 35px;
+  margin-left: 10px;
+}
+
+.more_contact-col p {
+  max-width: 450px;
+  list-style: 0.3;
+}
+
+.more_contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.more_contact-col ul li img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.more_contact form input, .more_contact form textarea {
+  display: block;
+  width: 100%;
+  background: #EBECFE;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.more_contact-col span {
+  display: block;
+  margin: 20px 0;
+}
+
+.box_contact {
+  background-color: #eeeeee;
+  height: auto;
+  width: 280px;
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem; /* Add padding for better spacing */
+}
+
+.box_contact h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #1bb7bc;
+  margin: 0.5rem 0; /* Add margin for spacing */
+}
+
+.box_contact span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center; /* Center text */
+}
+
+/* ----------- media query for tablets and below -------- */
+@media (max-width: 1024px) {
+  .more_contact {
+    flex-direction: column; /* Stack columns */
+    align-items: center;
+  }
+
+  .more_contact-col {
+    flex-basis: 100%; /* Make each column full-width */
+    padding: 20px;
+  }
+}
+
+/* ----------- media query for mobile devices -------- */
+@media (max-width: 700px) {
+  .more_contact {
+    margin: 40px auto;
+  }
+
+  .box_contact {
+    width: 100%;
+    max-width: 90%; /* Reduce width for mobile */
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .box_contact h3 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .box_contact span {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .more_contact-col h3 {
+    font-size: 20px;
+  }
+
+  .more_contact-col p, .more_contact-col ul li, .more_contact-col form input, .more_contact-col form textarea {
+    max-width: 100%; /* Ensure full width on mobile */
+  }
+}

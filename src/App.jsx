@@ -14,6 +14,7 @@ import MoreAbout from "./Components/MoreAbout/MoreAbout";
 import Rescue from "./Components/Rescue/Rescue";
 import Campaign from "./Components/Campaign/Campaign";
 import Inspiration from "./Components/Inspiration/Inspiration";
+import MoreContact from "./Components/MoreContact/MoreContact";
 import Gallery from "./Components/Gallery/Gallery";
 import Camels from "./Components/Gallery/Camels";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -73,6 +74,14 @@ const App = () => {
           element={
             <>
               <Rescue />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <MoreContact />
             </>
           }
         />

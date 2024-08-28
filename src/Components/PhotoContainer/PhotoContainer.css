@@ -7,11 +7,17 @@
   align-items: center;
   justify-content: center;
   filter: grayscale(40%); /* Convert the photo to grayscale */
+  transition: transform 0.5s ease-in-out; /* Ensure smooth transitions */
+}
+
+.photo.zoom-effect:hover {
+  transform: scale(0.4); /* Zoom-in effect */
 }
 
 .photo-text {
   max-width: 100%;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .photo-text h1 {

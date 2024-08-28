@@ -63,7 +63,7 @@ const Rescue = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/auth/rescuesubmition",
+        "https://sw-backend-iao6.onrender.com/api/v1/auth/rescuesubmition",
         formData, // Sending the plain JSON object
         {
           headers: {
