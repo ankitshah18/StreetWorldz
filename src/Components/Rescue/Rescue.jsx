@@ -83,7 +83,7 @@ const Rescue = () => {
   return (
     <>
       <div className="rescue-main-container">
-        <div className="rescue ">
+        <div className="rescue container">
           <div className="form">
             <h4>Request Rescue Form</h4>
             <form onSubmit={handleSubmit}>
