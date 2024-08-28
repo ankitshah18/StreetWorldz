@@ -38,12 +38,7 @@ const MoreContact = () => {
 
   return (
     <>
-      <PhotoContainer
-        image={contact}
-        text="Contact Us"
-        minHeight="17vh"
-        className="zoom-effect"
-      />
+      <PhotoContainer image={contact} text="Contact Us" minHeight="17vh" />
       <div className="contact-bottom container">
         <div className="box_contact">
           <h3>63 K+</h3>
