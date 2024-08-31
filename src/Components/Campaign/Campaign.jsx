@@ -29,7 +29,7 @@ const Campaign = () => {
       },
     },
   };
-  
+
   return (
     <div className="campaign container">
       <div className="line-heading">
@@ -41,6 +41,7 @@ const Campaign = () => {
       </div>
       
       <div className="gallery">
+      <OwlCarousel className="owl-theme" {...settings}>
         <div className="campaign-card-one">
           <div className="campaign-card">
             <img src={gallery_1} alt="gallery-1" className="gallery-img" />
@@ -93,7 +94,7 @@ const Campaign = () => {
             </div>
           </div>
         </div>
-
+        </OwlCarousel>
         {/* <img src={gallery_1} alt="" />
         <img src={gallery_2} alt="" />
         <img src={gallery_3} alt="" />
