@@ -3,7 +3,33 @@ import "./Campaign.css";
 import gallery_1 from "../../assets/gallery-1.png";
 import white_arrow from "../../assets/white-arrow.png";
 
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
 const Campaign = () => {
+  const settings = {
+    loop: false,
+    margin: 20,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1,
+        dots: true,
+      },
+      600: {
+        items: 2,
+        dots: true,
+      },
+      1024: {
+        items: 4,
+      },
+      1200: {
+        items: 4,
+      },
+    },
+  };
+  
   return (
     <div className="campaign container">
       <div className="line-heading">
@@ -13,6 +39,7 @@ const Campaign = () => {
           <h3>Featured Campaign</h3>
         </div>
       </div>
+      
       <div className="gallery">
         <div className="campaign-card-one">
           <div className="campaign-card">
