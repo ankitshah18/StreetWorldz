@@ -1,4 +1,3 @@
-import React from "react";
 import "./SuccessStories.css";
 
 import OwlCarousel from "react-owl-carousel";
