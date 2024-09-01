@@ -16,6 +16,7 @@ const Stories = () => {
     margin: 20,
     dots: false,
     responsive: {
+      
       0: {
         items: 1,
         dots: true,

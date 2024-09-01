@@ -15,6 +15,7 @@ const Hero = () => {
     fade: true,
     autoplay: true, // Automatically shift slides
     autoplaySpeed: 3000, // Duration of 3 seconds
+    pauseOnHover: false,
   };
 
   return (

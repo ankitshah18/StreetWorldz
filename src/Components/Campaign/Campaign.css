@@ -151,43 +151,43 @@
 
 /* ------- media query ------------- */
 @media (max-width: 1024px) {
-  .stories h3 {
+  .campaign h3 {
     font-size: 24px;
   }
 
-  .stories h2 {
+  .campaign h2 {
     font-size: 30px;
   }
 
-  .stories-card-one,
-  .stories-card-two,
-  .stories-card-three,
-  .stories-card-four {
+  .campaign-card-one,
+  .campaign-card-two,
+  .campaign-card-three,
+  .campaign-card-four {
     max-width: 400px;
   }
 
-  .stories-card img {
+  .campaign-card img {
     height: 180px;
   }
 }
 
 @media (max-width: 800px) {
-  .stories-heading {
+  .campaign-heading {
     margin-left: 1;
   }
 
-  .stories h3 {
+  .campaign h3 {
     font-size: 22px;
   }
 
-  .stories h2 {
+  .campaign h2 {
     font-size: 28px;
   }
 
-  .stories-card-one,
-  .stories-card-two,
-  .stories-card-three,
-  .stories-card-four {
+  .campaign-card-one,
+  .campaign-card-two,
+  .campaign-card-three,
+  .campaign-card-four {
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -198,37 +198,37 @@
     justify-content: center;
   }
 
-  .stories-card img {
+  .campaign-card img {
     height: 250px;
   }
 
-  .stories-card h3 {
+  .campaign-card h3 {
     font-size: 1rem;
   }
 
-  .stories-card p {
+  .campaign-card p {
     font-size: 0.9rem;
   }
 
-  .make-a-stories button {
+  .make-a.campaign button {
     width: 80%;
   }
 }
 
 @media (max-width: 600px) {
-  .stories h3 {
+  .campaign h3 {
     font-size: 20px;
   }
 
-  .stories h2 {
+  .campaign h2 {
     font-size: 24px;
   }
 
-  .stories-card img {
+  .campaign-card img {
     height: 200px;
   }
 
-  .make-a-stories button {
+  .make-a.campaign button {
     width: 100%;
   }
 }
