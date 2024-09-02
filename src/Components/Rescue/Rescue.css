@@ -1,8 +1,8 @@
 .rescue-main-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensures the entire viewport height is used */
-  background: url("../../assets/cat-bg-two.jpg") no-repeat center center;
+  height: 60vh; /* Ensures the entire viewport height is used */
+  /* background: url("../../assets/cat-bg-two.jpg") no-repeat center center; */
   background-size: cover;
 }
 
@@ -10,24 +10,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Set the desired height */
+  height: 50vh; /* Set the desired height */
   flex-shrink: 0; /* Prevent shrinking */
 }
 
 .form {
   border-radius: 1rem;
-  padding: 2rem;
-  margin: 2rem;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
-  /* background-color: rgba(255, 255, 255, 0.9); */
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   max-width: 1000px;
-  width: 90%;
+  width: 100%;
 }
 
 .form h4 {
   text-align: center;
   font-size: 2.5rem;
-  color: #f7d4d4;
+  color: #050505;
 }
 
 .form form {
@@ -84,6 +84,16 @@ textarea {
   .form {
     padding: 1rem;
     max-width: 90%; /* More flexible on smaller screens */
+  }
+
+  .form {
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 1000px;
+    width: 100%;
   }
 
   .form h4 {

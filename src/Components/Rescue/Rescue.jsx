@@ -83,6 +83,7 @@ const Rescue = () => {
   return (
     <>
       <div className="rescue-main-container">
+        <PhotoContainer image={cat} text="Gallery" minHeight="30vh" />
         <div className="rescue container">
           <div className="form">
             <h4>Request Rescue Form</h4>

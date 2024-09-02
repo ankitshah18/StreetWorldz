@@ -30,7 +30,7 @@
 .inspiration-main-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
+  height: 80vh; /* Full viewport height */
 }
 
 .image-container {
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../assets/dog-bg-three.jpg") no-repeat center center;
+  /* background: url("../../assets/dog-bg-three.jpg") no-repeat center center; */
   background-size: cover;
 }
 
@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: #333333;
 }
 
 .inspiration-container h2,
@@ -72,6 +73,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-style: italic;
   text-decoration: underline;
+  color: white;
 }
 
 .inspiration-container p {
@@ -106,7 +108,7 @@
 
 @media screen and (max-width: 840px) {
   .inspiration-container {
-    width: 90vw;
+    width: 99vw;
   }
 
   .inspiration-container h2 {
