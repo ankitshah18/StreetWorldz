@@ -1,77 +1,35 @@
-.more_contact {
-  margin: 80px auto;
-  max-width: 90%;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
-}
-
 .contact-bottom {
-  height: auto;
   display: flex;
-  justify-content: space-between;
-  margin: 100px auto;
-  gap: 0.5rem;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-direction: column; /* Align title at the top */
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  margin: auto;
+  background-color: #ffffff;
+  height: 80vh;
+  padding: 1rem; /* Add padding for better spacing */
 }
 
-.more_contact-col {
-  flex-basis: 48%;
-  color: #676767;
-  margin-bottom: 20px; /* Add space between columns on small screens */
+.contact-bottom h2 {
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 1rem; /* Add margin to separate from other content */
+  font-size: 2rem;
 }
 
-.more_contact-col h3 {
-  color: #000F38;
-  font-weight: 500;
-  font-size: 25px;
+.contact-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.more_contact-col h3 img {
-  width: 35px;
-  margin-left: 10px;
-}
-
-.more_contact-col p {
-  max-width: 450px;
-  list-style: 0.3;
-}
-
-.more_contact-col ul li {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.more_contact-col ul li img {
-  width: 25px;
-  margin-right: 10px;
-}
-
-.more_contact form input, .more_contact form textarea {
-  display: block;
-  width: 100%;
-  background: #EBECFE;
-  padding: 15px;
-  border: 0;
-  outline: 0;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  resize: none;
-}
-
-.more_contact-col span {
-  display: block;
-  margin: 20px 0;
+  gap: 1rem; /* Space between items */
+  width: 100%; /* Ensure full width */
+  margin: 0 auto; /* Center align the container */
+  height: auto; /* Remove fixed height */
+  max-width: 90%; /* Limit width for large screens */
 }
 
 .box_contact {
-  background-color: #eeeeee;
-  height: auto;
+  background-color: white;
+  height: 212px; /* Remove fixed height */
   width: 280px;
   max-width: 100%; /* Ensure it doesn't exceed parent width */
   border-radius: 1rem;
@@ -81,39 +39,32 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem; /* Add padding for better spacing */
-}
-
-.box_contact h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 3rem;
-  color: #1bb7bc;
-  margin: 0.5rem 0; /* Add margin for spacing */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  margin: 0.5rem auto; /* Add some margin to separate boxes */
 }
 
 .box_contact span {
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
   text-align: center; /* Center text */
 }
 
-/* ----------- media query for tablets and below -------- */
-@media (max-width: 1024px) {
-  .more_contact {
-    flex-direction: column; /* Stack columns */
-    align-items: center;
-  }
+.box_contact p {
+  text-align: center;
+  font-weight: 500;
+}
 
-  .more_contact-col {
-    flex-basis: 100%; /* Make each column full-width */
-    padding: 20px;
+/* Media queries for responsive adjustments */
+@media (max-width: 1024px) {
+  .contact-container {
+    max-width: 100%; /* Allow full width */
   }
 }
 
-/* ----------- media query for mobile devices -------- */
 @media (max-width: 700px) {
-  .more_contact {
-    margin: 40px auto;
+  .contact-bottom {
+    height: auto; /* Adjust height for mobile */
+    padding: 1rem;
   }
 
   .box_contact {
@@ -129,13 +80,5 @@
 
   .box_contact span {
     font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-
-  .more_contact-col h3 {
-    font-size: 20px;
-  }
-
-  .more_contact-col p, .more_contact-col ul li, .more_contact-col form input, .more_contact-col form textarea {
-    max-width: 100%; /* Ensure full width on mobile */
   }
 }

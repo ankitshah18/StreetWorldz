@@ -1,6 +1,5 @@
-
 .campaign {
-  margin: 80px auto;
+  margin: auto;
   width: 100%;
   padding: 1rem;
   background-color: #e1feff;
@@ -167,14 +166,13 @@
     height: 250px;
     object-position: center;
   }
-  
+
   .campaign-cards-container {
     display: flex;
     overflow-x: scroll;
     white-space: nowrap;
     gap: 1rem;
   }
-
 
   .campaign-card h3 {
     font-size: 1rem;

@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
-import { FaLocationDot } from "react-icons/fa6";
+
 import { IoLocationSharp } from "react-icons/io5";
-import { ImFacebook2 } from "react-icons/im";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa6";
+import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/facebook.png";
+import twitter from "../../assets/twitter.png";
+import youtube from "../../assets/youtube.png";
+import { GiSittingDog } from "react-icons/gi";
+
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="footer container">
       <div className="footer-column">
-        <img src="path-to-your-logo" alt="Logo" className="footer-logo" />
+        <GiSittingDog className="footer-logo" size={44} />
         <p>
           Dog Home Foundation, a place where dogs can find another home. It was
           started with the simple idea of helping the poor stray dogs and
@@ -25,7 +27,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ImFacebook2 />
+              <img src={facebook} alt="instagram" height={"40px"} />
             </a>
           </li>
           <li>
@@ -34,7 +36,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaSquareInstagram />
+              <img src={instagram} alt="instagram" height={"40px"} />
             </a>
           </li>
           <li>
@@ -43,7 +45,12 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaSquareXTwitter />
+              <img
+                src={twitter}
+                alt="instagram"
+                height={"40px"}
+                color="white"
+              />
             </a>
           </li>
           <li>
@@ -52,7 +59,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaYoutube />
+              <img src={youtube} alt="instagram" height={"40px"} />
             </a>
           </li>
         </ul>

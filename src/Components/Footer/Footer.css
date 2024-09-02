@@ -38,11 +38,6 @@ li {
   width: 1rem;
 }
 
-.footer-logo {
-  width: 100px; /* Adjust the logo size as needed */
-  margin-bottom: 10px;
-}
-
 .social-links {
   width: 60%;
   display: flex;
@@ -87,12 +82,13 @@ li {
   }
 
   .social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: center; /* Align links to the start (left) */
+    gap: 10px; /* Add some space between social icons */
+    width: auto; /* Adjust width to fit content */
+    margin: 0; /* Remove margin */
   }
 
   .social-links li {
-    margin: 5px 10px;
+    margin: 5px; /* Adjust margin to suit your design */
   }
 }
