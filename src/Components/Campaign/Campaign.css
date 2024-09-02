@@ -73,7 +73,10 @@
 .campaign-card {
   padding: 1rem;
   position: relative;
-  height: 100%; /* Fill the parent container */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .campaign-card h3 {
@@ -95,26 +98,30 @@
 }
 
 .campaign-card-one {
-  width: 28%;
   border-radius: 1rem;
+  flex: 1 1 200px;
+  max-width: 300px;
   background-color: #1bb7bc;
 }
 
 .campaign-card-two {
-  width: 28%;
   border-radius: 1rem;
+  flex: 1 1 200px;
+  max-width: 300px;
   background-color: black;
 }
 
 .campaign-card-three {
-  width: 28%;
   border-radius: 1rem;
+  flex: 1 1 200px;
+  max-width: 300px;
   background-color: red;
 }
 
 .campaign-card-four {
-  width: 28%;
   border-radius: 1rem;
+  flex: 1 1 200px;
+  max-width: 300px;
   background-color: blue;
 }
 
@@ -143,35 +150,56 @@
 }
 
 /* ------- media query ------------- */
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
+  .campaign h3 {
+    font-size: 24px;
+  }
+
+  .campaign h2 {
+    font-size: 30px;
+  }
+
   .campaign-card-one,
   .campaign-card-two,
   .campaign-card-three,
   .campaign-card-four {
-    width: 400px;
-    margin-right: 1rem;
+    max-width: 400px;
+  }
+
+  .campaign-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 800px) {
+  .campaign-heading {
+    margin-left: 1;
+  }
+
+  .campaign h3 {
+    font-size: 22px;
+  }
+
+  .campaign h2 {
+    font-size: 28px;
+  }
+
+  .campaign-card-one,
+  .campaign-card-two,
+  .campaign-card-three,
+  .campaign-card-four {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .gallery {
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    margin-top: 1rem;
     gap: 1rem;
+    justify-content: center;
   }
 
   .campaign-card img {
     height: 250px;
-    object-position: center;
-  }
-
-  .campaign-cards-container {
-    display: flex;
-    overflow-x: scroll;
-    white-space: nowrap;
-    gap: 1rem;
   }
 
   .campaign-card h3 {
@@ -182,7 +210,25 @@
     font-size: 0.9rem;
   }
 
-  .make-a-campaign button {
+  .make-a.campaign button {
     width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .campaign h3 {
+    font-size: 20px;
+  }
+
+  .campaign h2 {
+    font-size: 24px;
+  }
+
+  .campaign-card img {
+    height: 200px;
+  }
+
+  .make-a.campaign button {
+    width: 100%;
   }
 }
