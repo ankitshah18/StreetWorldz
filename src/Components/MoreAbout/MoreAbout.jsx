@@ -3,6 +3,7 @@ import "./MoreAbout.css";
 import about_img from "../../assets/dogOne.jpg";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 import cat from "../../assets/Cat.jpg";
+import Footer from "../Footer/Footer";
 const MoreAbout = () => {
   return (
     <>
@@ -78,6 +79,7 @@ const MoreAbout = () => {
         </div>
         {/* <div className="section-3"></div> */}
       </div>
+      <Footer />
     </>
   );
 };

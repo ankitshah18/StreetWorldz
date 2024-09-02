@@ -1,7 +1,6 @@
 .about {
   /* margin: 100px auto; */
   margin-top: 5rem;
-
   display: flex;
   /* align-items: center; */
   justify-content: space-between;
@@ -106,16 +105,21 @@
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
-  .about-left,
-  .about-right {
-    flex-basis: 48%; /* Side by side on tablets and above */
-  }
-}
 
 @media (max-width: 767px) {
   .about h2 {
     font-size: 28px; /* Smaller heading on small screens */
+  }
+
+  .about {
+    margin-top: 5rem;
+    width: 100%;
+    /* margin: 100px auto; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column;
   }
 
   .box {

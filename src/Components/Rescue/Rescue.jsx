@@ -84,7 +84,7 @@ const Rescue = () => {
     <>
       <div className="rescue-main-container">
         <PhotoContainer image={cat} text="Gallery" minHeight="30vh" />
-        <div className="rescue container">
+        {/* <div className="rescue container">
           <div className="form">
             <h4>Request Rescue Form</h4>
             <form onSubmit={handleSubmit}>
@@ -97,11 +97,11 @@ const Rescue = () => {
                     placeholder="Your First Name"
                     onChange={handleChange}
                   />
-                  {/* <input
+                  <input
                   type="file"
                   name="rescueImage"
                   placeholder="Upload Rescue Image"
-                /> */}
+                />
                   <input
                     type="tel"
                     name="phoneNumber"
@@ -183,7 +183,7 @@ const Rescue = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
 
         <div className="footer-container">
           <Footer />
