@@ -78,7 +78,7 @@
 
 .home_slider_Main .item .info {
   position: absolute;
-  top: 21%;
+  top: 38%;
   left: 11%;
   z-index: 100;
 }
@@ -120,6 +120,13 @@
     font-size: 25px !important;
   }
 
+  .home_slider_Main .item .info {
+    position: absolute;
+    top: 21%;
+    left: 11%;
+    z-index: 100;
+  }
+
   .home_slider_Main .item .info h2 {
     font-size: 4.2vw;
   }
@@ -140,6 +147,13 @@
   .slick-arrow {
     width: 30px !important;
     height: 30px !important;
+  }
+
+  .home_slider_Main .item .info {
+    position: absolute;
+    top: 21%;
+    left: 11%;
+    z-index: 100;
   }
 
   .slick-prev:before,
