@@ -5,9 +5,12 @@ import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
-
+import { Smartphone } from "lucide-react";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 import contact from "../../assets/contactus.jpg";
+import { MailOpen } from "lucide-react";
+import { MapPin } from "lucide-react";
+import Footer from "../Footer/Footer";
 
 const MoreContact = () => {
   const [result, setResult] = React.useState("");
@@ -38,82 +41,43 @@ const MoreContact = () => {
 
   return (
     <>
-      <PhotoContainer image={contact} text="Contact Us" minHeight="17vh" />
+      <PhotoContainer image={contact} text="" minHeight="17vh" />
       <div className="contact-bottom container">
-        <div className="box_contact">
-          <h3>63 K+</h3>
-          <span>Made Happy Animal</span>
-        </div>
-        <div className="box_contact">
-          <h3>500 +</h3>
-          <span>Permanent Resident</span>
-        </div>
-        <div className="box_contact">
-          <h3>180 +</h3>
-          <span>Successful Adoption</span>
-        </div>
-        <div className="box_contact">
-          <h3>100 M+</h3>
-          <span>Donation Completed</span>
-        </div>
-      </div>
-      <div className="more_contact">
-        <div className="more_contact-col">
-          <h3>
-            Send us a message <img src={msg_icon} alt="" />
-          </h3>
-          <p>
-            Feel free to reach out through contact form or find our contact
-            information below. Your feedback, questions, and suggestions are
-            important to us as we strive to provide exceptional service to our
-            community.
-          </p>
-          <ul>
-            <li>
-              <img src={mail_icon} alt="" />
-              ankitshahankit181@gmail.com
-            </li>
-            <li>
-              <img src={phone_icon} alt="" />
-              +91 8728952565
-            </li>
-            <li>
-              <img src={location_icon} alt="" />
-              New Delhi
-              <br /> India
-            </li>
-          </ul>
-        </div>
-        <div className="more_contact-col">
-          <form onSubmit={onSubmit}>
-            <label>Your name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
-            <label>Phone Number</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter your mobile number"
-              required
-            />
-            <label>Write your messages here</label>
-            <textarea
-              name="message"
-              rows="6"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-            <button type="submit" className="btn dark-btn">
-              Submit now <img src={white_arrow} alt="" />
-            </button>
-          </form>
-          <span>{result}</span>
+        <h2>Contact Us</h2>
+        <div className="contact-container">
+          <div className="box_contact">
+            <Smartphone size={44} color={"#1bb7bc"} />
+
+            <span>Help Line Number</span>
+            <p>+91 9854595842</p>
+            <p>+91 9854595842</p>
+          </div>
+          <div className="box_contact">
+            <Smartphone size={44} color={"#1bb7bc"} />
+
+            <span>Shelter Number</span>
+            <p>+91 9854595842</p>
+            <p>+91 9854595842</p>
+          </div>
+          <div className="box_contact">
+            <MailOpen size={44} color={"#1bb7bc"} />
+
+            <span>Email Us</span>
+            <p>contact@gmail.com</p>
+          </div>
+          <div className="box_contact">
+            <MapPin size={44} color={"#1bb7bc"} />
+
+            <span>Address</span>
+            <p>
+              Ganesham Farm House Plot No.11/12/13, Opp. GS Jangid School,
+              Bujhawad, Jodhpur, Rajasthan 342802
+            </p>
+          </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };
