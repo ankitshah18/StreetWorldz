@@ -14,6 +14,12 @@ const Navbar = () => {
     });
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
@@ -40,11 +46,27 @@ const Navbar = () => {
             Contact Us
           </Link>
         </li>
-        <li>
+        <div className='nav-item dropdown ${sticky ? "dark-nav" : ""}'>
+        <button onClick={toggleDropdown} className={`dropbtn-arrow ${isOpen ? "is-open" : ""}`}>
+    Services
+  </button>
+          <div className={`dropdown-content ${isOpen ? "show" : ""}`}>
+            <Link to="/rescue" smooth={true} offset={-260} duration={500}>
+              Rescue
+            </Link>
+            <Link to="/rescue" smooth={true} offset={-260} duration={500}>
+              Rescue
+            </Link>
+            <Link to="/rescue" smooth={true} offset={-260} duration={500}>
+              Rescue
+            </Link>
+          </div>
+        </div>
+        {/* <li>
           <Link to="/rescue" smooth={true} offset={-260} duration={500}>
             Rescue
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/aboutus"
