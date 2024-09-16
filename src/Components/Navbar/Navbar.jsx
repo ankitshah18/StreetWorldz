@@ -52,13 +52,13 @@ const Navbar = () => {
   </button>
           <div className={`dropdown-content ${isOpen ? "show" : ""}`}>
             <Link to="/rescue" smooth={true} offset={-260} duration={500}>
-              Rescue
+              Rescue Form
             </Link>
             <Link to="/rescue" smooth={true} offset={-260} duration={500}>
-              Rescue
+              Volunteer Form
             </Link>
             <Link to="/rescue" smooth={true} offset={-260} duration={500}>
-              Rescue
+              Admission Form
             </Link>
           </div>
         </div>
