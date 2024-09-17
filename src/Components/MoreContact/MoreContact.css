@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Space between items */
+  gap: 0.5rem; /* Space between items */
   width: 100%; /* Ensure full width */
   margin: 0 auto; /* Center align the container */
   height: auto; /* Remove fixed height */

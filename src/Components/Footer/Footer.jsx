@@ -95,7 +95,7 @@ const Footer = () => {
       </div>
       <div className="footer-column">
         <h3>Contact Us</h3>
-        <p
+        {/* <p
           style={{
             display: "flex",
 
@@ -109,18 +109,18 @@ const Footer = () => {
         <p>
           Ganesham Farm House Plot No.13, opp. GS Jangid School, Bujhawad,
           Jodhpur, Rajasthan 342802
-        </p>
+        </p> */}
         <p>
-          Mail Us:{" "}
+          Mail Us :{" "}
           <a href="mailto:contact@doghomefoundation.com">
-            contact@doghomefoundation.com
+            streetworldzhelpline@gmail.com
           </a>
         </p>
         <p>
-          Call Us: <a href="tel:+919352727457">+91 93527 27457</a>
+          Call Us : <a href="tel:+919352727457">+91 9667016057</a>
         </p>
         <p>
-          Call Us: <a href="tel:+919696967396">+91 96969 67396</a>
+          Call Us : <a href="tel:+919696967396">+91 8860200400</a>
         </p>
       </div>
     </div>

@@ -27,11 +27,17 @@ const About = ({ setPlayState }) => {
         </div>
         <div className="about-left">
           <iframe
-            src="https://www.youtube.com/embed/E7wJTI-1dvQ"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/C23UPm3h8-U?si=yXHTkCyknZMlwreL"
+            title="YouTube video player"
             frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
             className="about-img"
-            // height="auto"
           ></iframe>
+          {/* about-img */}
           {/* <img src={about_img} alt=""  /> */}
         </div>
       </div>

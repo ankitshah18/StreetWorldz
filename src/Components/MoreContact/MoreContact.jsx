@@ -49,23 +49,22 @@ const MoreContact = () => {
             <Smartphone size={44} color={"#1bb7bc"} />
 
             <span>Help Line Number</span>
-            <p>+91 9854595842</p>
-            <p>+91 9854595842</p>
+            <p>+91 9667016057</p>
+            <p>+91 8860200400</p>
           </div>
           <div className="box_contact">
             <Smartphone size={44} color={"#1bb7bc"} />
 
             <span>Shelter Number</span>
-            <p>+91 9854595842</p>
-            <p>+91 9854595842</p>
+            <p>+91 8860200400</p>
           </div>
           <div className="box_contact">
             <MailOpen size={44} color={"#1bb7bc"} />
 
             <span>Email Us</span>
-            <p>contact@gmail.com</p>
+            <p>streetworldzhelpline@gmail.com</p>
           </div>
-          <div className="box_contact">
+          {/* <div className="box_contact">
             <MapPin size={44} color={"#1bb7bc"} />
 
             <span>Address</span>
@@ -73,7 +72,7 @@ const MoreContact = () => {
               Ganesham Farm House Plot No.11/12/13, Opp. GS Jangid School,
               Bujhawad, Jodhpur, Rajasthan 342802
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
