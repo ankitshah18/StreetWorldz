@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link to="/volunteer" smooth={true} offset={-260} duration={500}>
               Volunteer Form
             </Link>
-            <Link to="/rescue" smooth={true} offset={-260} duration={500}>
+            <Link to="/volunteer" smooth={true} offset={-260} duration={500}>
               Admission Form
             </Link>
           </div>
