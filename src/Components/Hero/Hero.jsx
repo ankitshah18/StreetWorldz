@@ -9,12 +9,12 @@ const Hero = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
     autoplay: true, // Automatically shift slides
-    autoplaySpeed: 3000, // Duration of 3 seconds
+    autoplaySpeed: 5000, // Duration of 3 seconds
     pauseOnHover: false,
   };
 
