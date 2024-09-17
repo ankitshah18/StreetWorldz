@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 import cat from "../../assets/Cat.jpg";
 import Footer from "../Footer/Footer";

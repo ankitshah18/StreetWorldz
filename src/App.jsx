@@ -17,6 +17,7 @@ import Inspiration from "./Components/Inspiration/Inspiration";
 import MoreContact from "./Components/MoreContact/MoreContact";
 import Gallery from "./Components/Gallery/Gallery";
 import Camels from "./Components/Gallery/Camels";
+import Volunteer from "./Components/Rescue/Volunteer";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -77,6 +78,15 @@ const App = () => {
             </>
           }
         />
+        <Route
+          path="/volunteer"
+          element={
+            <>
+              <Volunteer />
+            </>
+          }
+        />
+
         <Route
           path="/contact"
           element={

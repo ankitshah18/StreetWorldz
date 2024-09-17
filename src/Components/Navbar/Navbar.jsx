@@ -47,14 +47,17 @@ const Navbar = () => {
           </Link>
         </li>
         <div className='nav-item dropdown ${sticky ? "dark-nav" : ""}'>
-        <button onClick={toggleDropdown} className={`dropbtn-arrow ${isOpen ? "is-open" : ""}`}>
-    Services
-  </button>
+          <button
+            onClick={toggleDropdown}
+            className={`dropbtn-arrow ${isOpen ? "is-open" : ""}`}
+          >
+            Services
+          </button>
           <div className={`dropdown-content ${isOpen ? "show" : ""}`}>
             <Link to="/rescue" smooth={true} offset={-260} duration={500}>
               Rescue Form
             </Link>
-            <Link to="/rescue" smooth={true} offset={-260} duration={500}>
+            <Link to="/volunteer" smooth={true} offset={-260} duration={500}>
               Volunteer Form
             </Link>
             <Link to="/rescue" smooth={true} offset={-260} duration={500}>
