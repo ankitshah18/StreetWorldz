@@ -42,7 +42,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/contact" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="/contact"
+            smooth={true}
+            offset={-260}
+            duration={500}
+            onClick={toggleMenu}
+          >
             Contact Us
           </Link>
         </li>
@@ -54,7 +60,16 @@ const Navbar = () => {
             Services
           </button>
           <div className={`dropdown-content ${isOpen ? "show" : ""}`}>
-            <Link to="/volunteer" smooth={true} offset={-260} duration={500}>
+            <Link
+              to="/volunteer"
+              smooth={true}
+              offset={-260}
+              duration={500}
+              onClick={() => {
+                toggleDropdown();
+                toggleMenu();
+              }}
+            >
               Rescue Form
             </Link>
             {/* <Link to="/volunteer" smooth={true} offset={-260} duration={500}>
@@ -82,7 +97,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/gallery" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="/gallery"
+            smooth={true}
+            offset={-260}
+            duration={500}
+            onClick={toggleMenu}
+          >
             Gallery
           </Link>
         </li>

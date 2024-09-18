@@ -76,6 +76,14 @@ textarea {
   background-color: #0056b3;
 }
 
+.form-wrapper {
+  margin: 4rem auto;
+  padding: 1rem; /* Optional: Add padding if needed */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for the form */
+  max-width: 600px; /* Optional: Set a max-width for better layout */
+  border-radius: 8px; /* Optional: Add border-radius for smooth corners */
+}
+
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;
