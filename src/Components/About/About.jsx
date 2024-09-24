@@ -18,8 +18,8 @@ const About = ({ setPlayState }) => {
           </div>
 
           <p>
-            At Dog Home Foundation, we are dedicated to providing a lifeline for
-            ill, injured, and accidental animals in need. Our organization
+            At StreetWorldz, we are dedicated to providing a lifeline for ill,
+            injured, and accidental animals in need. Our organization
             specializes in rescuing, treating, and sheltering these vulnerable
             animals, giving them a second chance at a happy and healthy life.
           </p>

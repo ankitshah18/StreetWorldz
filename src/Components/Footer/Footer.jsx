@@ -4,6 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
 import twitter from "../../assets/twitter.png";
+import whatsapp from "../../assets/Whatsapp.png";
 import youtube from "../../assets/youtube.png";
 import { GiSittingDog } from "react-icons/gi";
 
@@ -15,9 +16,8 @@ const Footer = () => {
       <div className="footer-column">
         <GiSittingDog className="footer-logo" size={44} />
         <p>
-          Dog Home Foundation, a place where dogs can find another home. It was
-          started with the simple idea of helping the poor stray dogs and
-          treating them.
+          StreetWorldz, a place where dogs can find another home. It was started
+          with the simple idea of helping the poor stray dogs and treating them.
         </p>
         <p>Follow Us</p>
         <ul className="social-links">
@@ -40,13 +40,9 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="" target="_blank" rel="noopener noreferrer">
               <img
-                src={twitter}
+                src={whatsapp}
                 alt="instagram"
                 height={"40px"}
                 color="white"
@@ -67,11 +63,11 @@ const Footer = () => {
       <div className="footer-column">
         <h3>Informations</h3>
         <ul className="footer-links">
-          <li>
+          {/* <li>
             <Link to="/blog">Blog</Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/who-we-are">Who We Are</Link>
+            <Link to="/aboutus">Who We Are</Link>
           </li>
           <li>
             <Link to="/our-team">Our Team</Link>
@@ -80,7 +76,7 @@ const Footer = () => {
             <Link to="/success-stories">Success Stories</Link>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
             <Link to="/privacy-policy">Privacy Policy</Link>
