@@ -66,16 +66,16 @@
 .about-bottom {
   height: auto; /* Adjust height automatically */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 1rem;
   margin-bottom: 5rem;
   gap: 0.5rem;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  /* flex-wrap: wrap;  */
 }
 .box {
   background-color: #eeeeee;
   height: auto;
-  width: 100%; /* Full width by default */
+  min-width: auto; /* Full width by default */
   max-width: 280px; /* Max width on larger screens */
   border-radius: 1rem;
   display: flex;
@@ -129,5 +129,17 @@
 
   .box h3 span {
     font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 840px) {
+  .about-bottom {
+    height: auto; /* Adjust height automatically */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 }

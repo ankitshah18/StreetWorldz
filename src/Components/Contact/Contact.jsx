@@ -48,11 +48,11 @@ const Contact = () => {
         <ul>
           <li>
             <img src={mail_icon} alt="" />
-            ankitshahankit181@gmail.com
+            streetWorldzhelpline@gmail.com
           </li>
           <li>
             <img src={phone_icon} alt="" />
-            +91 8728952565
+            +91 9667016057
           </li>
           <li>
             <img src={location_icon} alt="" />

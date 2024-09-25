@@ -167,7 +167,7 @@
 /* ------- media query ------------- */
 
 /* ------- media query ------------- */
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .Donations {
     padding: 0 40px;
     flex-direction: column; /* Stack elements vertically */

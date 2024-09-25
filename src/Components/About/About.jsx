@@ -70,7 +70,7 @@ const About = ({ setPlayState }) => {
           <span>Successful Adoption</span>
         </div>
 
-        <div className="box">
+        {/* <div className="box">
           <h3>
             <span>
               <CountUp start={0} end={100} />
@@ -78,7 +78,7 @@ const About = ({ setPlayState }) => {
             </span>
           </h3>
           <span>Donation Completed</span>
-        </div>
+        </div> */}
       </div>
     </>
   );

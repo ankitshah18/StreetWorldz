@@ -6,7 +6,7 @@
     justify-content: center; */
   overflow: hidden;
   position: relative;
-  height: 90vh;
+  height: 97vh;
 }
 
 .slick-arrow {
@@ -196,4 +196,14 @@
   /* .home_slider_Main .slick-dots {
         bottom: 15px !important;
     } */
+}
+
+@media (max-width: 840px) {
+  .home_slider_Main {
+    /* display: flex;
+      justify-content: center; */
+    overflow: hidden;
+    position: relative;
+    height: 55vh;
+  }
 }
