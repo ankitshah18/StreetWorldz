@@ -76,6 +76,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   justify-content: space-between;
 }
 
@@ -101,7 +102,7 @@
   border-radius: 1rem;
   flex: 1 1 200px;
   max-width: 300px;
-  background-color: #1bb7bc;
+  background-color: #f8b400;
 }
 
 .campaign-card-two {
@@ -132,14 +133,76 @@
   margin-top: 1rem;
 }
 
-.make-a-campaign button {
+.make-a-campaign-one button {
   border: 1px solid white;
-  background-color: #1bb7bc;
+  background-color: #f8b400;
   color: white;
   padding: 0.5rem;
   width: 100%;
   border-radius: 1.5rem;
   margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+.make-a-campaign-two button {
+  border: 1px solid white;
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.make-a-campaign-three button {
+  border: 1px solid white;
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.make-a-campaign-four button {
+  border: 1px solid white;
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.make-a-campaign-one button:hover {
+  background-color: white; /* Fill background with white */
+  color: #1bb7bc; /* Change text color to original background */
+  /* Change border color to match text */
+}
+.make-a-campaign-two button:hover {
+  background-color: white; /* Fill background with white */
+  color: #1bb7bc; /* Change text color to original background */
+  /* Change border color to match text */
+}
+.make-a-campaign-three button:hover {
+  background-color: white; /* Fill background with white */
+  color: #1bb7bc; /* Change text color to original background */
+  /* Change border color to match text */
+}
+.make-a-campaign-four button:hover {
+  background-color: white; /* Fill background with white */
+  color: #1bb7bc; /* Change text color to original background */
+  /* Change border color to match text */
 }
 
 .button-container {

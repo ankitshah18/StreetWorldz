@@ -32,8 +32,8 @@ a {
   cursor: pointer;
 }
 .container {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 17%;
+  padding-right: 17%;
   /* flex: 1; This ensures the container takes up the remaining space */
 }
 .btn {

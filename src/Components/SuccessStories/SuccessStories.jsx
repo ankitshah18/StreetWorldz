@@ -16,7 +16,6 @@ const Stories = () => {
     margin: 20,
     dots: false,
     responsive: {
-      
       0: {
         items: 1,
         dots: true,
@@ -52,8 +51,8 @@ const Stories = () => {
               <img src={gallery_1} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
               <p>
-                Dog Home Foundation is a beacon of hope for stray and injured
-                dogs, providing a safe haven for over 500 dogs at our shelter.
+                StreetWorldz is a beacon of hope for stray and injured dogs,
+                providing a safe haven for over 500 dogs at our shelter.
               </p>
               <div className="make-a-stories">
                 <button>Read More.</button>
@@ -65,8 +64,8 @@ const Stories = () => {
               <img src={gallery_2} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
               <p>
-                Dog Home Foundation is a beacon of hope for stray and injured
-                dogs, providing a safe haven for over 500 dogs at our shelter.
+                StreetWorldz is a beacon of hope for stray and injured dogs,
+                providing a safe haven for over 500 dogs at our shelter.
               </p>
               <div className="make-a-stories">
                 <button>Read More.</button>
@@ -78,8 +77,8 @@ const Stories = () => {
               <img src={gallery_3} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
               <p>
-                Dog Home Foundation is a beacon of hope for stray and injured
-                dogs, providing a safe haven for over 500 dogs at our shelter.
+                StreetWorldz is a beacon of hope for stray and injured dogs,
+                providing a safe haven for over 500 dogs at our shelter.
               </p>
               <div className="make-a-stories">
                 <button>Read More.</button>
@@ -91,8 +90,8 @@ const Stories = () => {
               <img src={gallery_4} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
               <p>
-                Dog Home Foundation is a beacon of hope for stray and injured
-                dogs, providing a safe haven for over 500 dogs at our shelter.
+                StreetWorldz is a beacon of hope for stray and injured dogs,
+                providing a safe haven for over 500 dogs at our shelter.
               </p>
               <div className="make-a-stories">
                 <button>Read More.</button>
@@ -104,7 +103,7 @@ const Stories = () => {
             <img src={gallery_1} alt="gallery-1" className="gallery-img" />
             <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
             <p>
-              Dog Home Foundation is a beacon of hope for stray and injured
+              StreetWorldz is a beacon of hope for stray and injured
               dogs, providing a safe haven for over 500 dogs at our shelter.
             </p>
             <div className="make-a-stories">
@@ -115,7 +114,7 @@ const Stories = () => {
             <img src={gallery_2} alt="gallery-2" className="gallery-img" />
             <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
             <p>
-              Dog Home Foundation is a beacon of hope for stray and injured
+              StreetWorldz is a beacon of hope for stray and injured
               dogs, providing a safe haven for over 500 dogs at our shelter.
             </p>
             <div className="make-a-stories">
@@ -126,7 +125,7 @@ const Stories = () => {
             <img src={gallery_3} alt="gallery-3" className="gallery-img" />
             <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
             <p>
-              Dog Home Foundation is a beacon of hope for stray and injured
+              StreetWorldz is a beacon of hope for stray and injured
               dogs, providing a safe haven for over 500 dogs at our shelter.
             </p>
             <div className="make-a-stories">
@@ -137,7 +136,7 @@ const Stories = () => {
             <img src={gallery_4} alt="gallery-4" className="gallery-img" />
             <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
             <p>
-              Dog Home Foundation is a beacon of hope for stray and injured
+              StreetWorldz is a beacon of hope for stray and injured
               dogs, providing a safe haven for over 500 dogs at our shelter.
             </p>
             <div className="make-a-stories">
