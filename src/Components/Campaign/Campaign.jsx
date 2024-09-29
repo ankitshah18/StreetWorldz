@@ -1,8 +1,8 @@
 import "./Campaign.css";
-import gallery_1 from "../../assets/gallery-1.png";
 import white_arrow from "../../assets/white-arrow.png";
 import { FoodCampaign } from "./CampaignData";
 import { getCardColor } from "./CampaignData";
+
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
