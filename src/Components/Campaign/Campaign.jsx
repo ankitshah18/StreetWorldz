@@ -6,6 +6,7 @@ import { getCardColor } from "./CampaignData";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Heart } from "lucide-react";
 
 const Campaign = () => {
   const settings = {
@@ -49,7 +50,10 @@ const Campaign = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className={`make-a-campaign-${item.number}`}>
-                  <button>Donate Now</button>
+                  <button className="donate-button">
+                    <Heart size={16} style={{ marginRight: "6px" }} />
+                    Donate Now
+                  </button>
                 </div>
               </div>
             </div>

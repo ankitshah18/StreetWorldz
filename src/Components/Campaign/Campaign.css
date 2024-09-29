@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  margin-top: 1rem;
   gap: 1rem;
 }
 .gallery img {
@@ -203,6 +204,17 @@
   background-color: white; /* Fill background with white */
   color: #1bb7bc; /* Change text color to original background */
   /* Change border color to match text */
+}
+
+.donate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .button-container {

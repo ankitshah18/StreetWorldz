@@ -22,7 +22,7 @@ import Volunteer from "./Components/Rescue/Volunteer";
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
-  const location = useLocation();
+  /* const location = useLocation(); */
 
   // console.log("aboutus", location.pathname);
 
