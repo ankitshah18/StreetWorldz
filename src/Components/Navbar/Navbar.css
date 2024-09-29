@@ -97,7 +97,19 @@ nav ul li {
   display: block;
 }
 
+.food-campaign-nav {
+  background-color: #343a40; /* Example background color for FoodCampaign */
+}
 
+.dark-nav {
+  background-color: #ffffff;
+}
+
+.container {
+  transition: background-color 0.3s ease;
+}
+
+/* Add other styles as needed */
 
 /* ----- media query ----------- */
 
@@ -137,9 +149,9 @@ nav ul li {
     display: block;
     margin: 5px 40px;
     color: white;
-    position: relative; 
+    position: relative;
   }
-  
+
   .dropbtn-arrow.is-open::after {
     transform: rotate(180deg);
     transition: transform 0.3s ease-in-out;

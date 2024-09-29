@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Donations.css";
 import { FaRegHeart } from "react-icons/fa";
 import slidesData from "./SlideData";
+import { LuDog } from "react-icons/lu";
 
 const Donations = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,7 +50,7 @@ const Donations = () => {
                   <h2>{slide.title}</h2>
                   <p>{slide.text}</p>
                   <button className="btn_outline">
-                    <FaRegHeart />
+                    <LuDog />
                     Donate Now
                   </button>
                 </div>
@@ -69,7 +70,7 @@ const Donations = () => {
           medical attention they require.
         </h5>
         <button className="btn">
-          <FaRegHeart />
+          <LuDog />
           Donate Now
         </button>
       </div>

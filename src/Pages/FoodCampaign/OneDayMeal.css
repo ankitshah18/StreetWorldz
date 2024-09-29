@@ -1,0 +1,228 @@
+.title-food {
+  min-height: 80vh;
+  /* margin:  auto; */
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.title-food img {
+  border-radius: 1rem;
+}
+.meal-img {
+  width: 100%;
+}
+.food-description {
+  margin-top: 1rem;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  text-align: center;
+  padding: 1rem;
+}
+.food-description p {
+  margin-bottom: 15px;
+}
+
+.description-and-payment {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.description-cards {
+  width: 60%;
+}
+
+.description-card-one {
+  background-color: #dee2e6;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 20px;
+}
+.description-card-one img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  display: inline-block;
+  border-radius: 1rem;
+}
+
+.description-card-one p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Payement Card */
+
+.payement-cards {
+  width: 40%;
+}
+
+.payment-card-one {
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.header-one {
+  background-color: #dee2e6;
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+.header-one h4 {
+  font-size: 20px;
+}
+.card-one-logos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.card-one-logos img {
+  width: 45px;
+  height: 45px;
+}
+
+.payement-card-two {
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.money-section {
+  padding: 1rem;
+  height: auto;
+}
+.money-section h5 {
+  margin-bottom: 10px;
+}
+.progress-bar {
+  width: 100%;
+  border-radius: 10px;
+
+  background-color: #dee2e6;
+}
+.bar {
+  padding: 4px;
+  width: 81%;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #17a2b8;
+}
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top-color: rgba(0, 0, 0, 0.15);
+}
+.money-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.money-tab {
+  padding: 5px 12px;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+.money-tab:hover {
+  background-color: black;
+  color: white;
+}
+.selected-amount {
+  border: 1px solid #ced4da;
+  border-color: #858585;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50px;
+  height: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.payment-option-icons {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  margin-right: 10px;
+}
+.payment-icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.payment-icon p {
+  font-size: 10px;
+}
+@media (max-width: 1270px) {
+  .title-food img {
+    width: 60rem;
+  }
+  .payment-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .description-and-payment {
+    display: flex;
+    flex-direction: column;
+  }
+  .description-cards {
+    width: 100%;
+  }
+  .payement-cards {
+    width: 100%;
+  }
+  .card-one-logos img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 950px) {
+  .title-food img {
+    width: 40rem;
+  }
+  .payment-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .card-one-logos img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title-food img {
+    width: 30rem;
+  }
+  .payment-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .card-one-logos img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title-food img {
+    width: 20rem;
+  }
+  .payment-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .card-one-logos img {
+    width: 55px;
+    height: 55px;
+  }
+}

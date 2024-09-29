@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "./Hero.css";
 import { FaRegHeart } from "react-icons/fa";
+import { LuDog } from "react-icons/lu";
 
 import dog from "../../assets/dog.jpg";
 import slide1 from "../../assets/slide1.jpg";
@@ -28,7 +29,7 @@ const Hero = () => {
               <p>Help, Donate and Fundraise</p>
               <h2>Your Contribution is Important</h2>
               <button className="btn">
-                <FaRegHeart />
+                <LuDog />
                 Donate Now
               </button>
             </div>
@@ -39,7 +40,7 @@ const Hero = () => {
               <p>Help, Donate and Fundraise</p>
               <h2>Your Contribution is Important</h2>
               <button className="btn">
-                <FaRegHeart />
+                <LuDog />
                 Donate Now
               </button>
             </div>
@@ -54,7 +55,7 @@ const Hero = () => {
                 Protection
               </h2>
               <button className="btn">
-                <FaRegHeart />
+                <LuDog />
                 Donate Now
               </button>
             </div>
@@ -69,7 +70,7 @@ const Hero = () => {
                 Precious Lives
               </h2>
               <button className="btn">
-                <FaRegHeart />
+                <LuDog />
                 Donate Now
               </button>
             </div>

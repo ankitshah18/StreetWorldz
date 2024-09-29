@@ -5,6 +5,7 @@ const FoodCampaign = [
     title: "1 Day Meal",
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
+    routName: "1-day-meal",
   },
   {
     id: "2",
@@ -12,6 +13,7 @@ const FoodCampaign = [
     title: "1 Time Meal",
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
+    routName: "1-time-meal",
   },
   {
     id: "3",
@@ -19,6 +21,7 @@ const FoodCampaign = [
     title: "For Street",
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
+    routName: "for-street",
   },
   {
     id: "4",
@@ -26,6 +29,7 @@ const FoodCampaign = [
     title: "For Shelter",
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
+    routName: "for-shelter",
   },
 ];
 

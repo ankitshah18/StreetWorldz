@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSittingDog } from "react-icons/gi";
 import { LuDog } from "react-icons/lu";
@@ -25,8 +25,15 @@ const Navbar = () => {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
   };
 
+  // Check if the current route is the FoodCampaign route
+  const isFoodCampaign = location.pathname.startsWith("/featuredFoodCampaign");
+
   return (
-    <nav className={`container ${sticky ? "dark-nav" : ""}`}>
+    <nav
+      className={`container ${sticky ? "dark-nav" : ""} ${
+        isFoodCampaign ? "food-campaign-nav" : ""
+      }`}
+    >
       {/* <img src={logo} alt="" className="logo" /> */}
       <GiSittingDog className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>

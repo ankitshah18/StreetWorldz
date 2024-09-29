@@ -18,13 +18,21 @@ import MoreContact from "./Components/MoreContact/MoreContact";
 import Gallery from "./Components/Gallery/Gallery";
 import Camels from "./Components/Gallery/Camels";
 import Volunteer from "./Components/Rescue/Volunteer";
+import FoodCampaign from "./Pages/FoodCampaign/OneDayMeal";
+
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [playState, setPlayState] = useState(false);
+  const [routeTitle, setRouteTitle] = useState(
+    localStorage.getItem("routeTitle") || ""
+  );
+
   const location = useLocation();
 
   // console.log("aboutus", location.pathname);
+
+  console.log("Route", routeTitle);
 
   return (
     <div className="main-content">
@@ -37,7 +45,7 @@ const App = () => {
             <>
               <Hero />
               <About setPlayState={setPlayState} />
-              <Campaign />
+              <Campaign setRouteTitle={setRouteTitle} />
 
               <Donations />
               <Stories />
@@ -116,6 +124,14 @@ const App = () => {
           element={
             <>
               <Camels />
+            </>
+          }
+        />
+        <Route
+          path="/featuredFoodCampaign/:title"
+          element={
+            <>
+              <FoodCampaign />
             </>
           }
         />

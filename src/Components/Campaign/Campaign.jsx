@@ -6,8 +6,12 @@ import { getCardColor } from "./CampaignData";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { LuDog } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Campaign = () => {
+const Campaign = ({ setRouteTitle }) => {
+  const navigate = useNavigate();
   const settings = {
     loop: false,
     margin: 20,
@@ -30,6 +34,12 @@ const Campaign = () => {
     },
   };
 
+  const handleDonateClick = (title) => {
+    setRouteTitle(title);
+    localStorage.setItem("routeTitle", title); // Save to localStorage
+    navigate(`/featuredFoodCampaign/${encodeURIComponent(title)}`); // Navigate with title
+  };
+
   return (
     <div className="campaign container">
       <div className="line-heading">
@@ -49,7 +59,15 @@ const Campaign = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className={`make-a-campaign-${item.number}`}>
-                  <button>Donate Now</button>
+                  <Link
+                    to={`/featuredFoodCampaign/${encodeURIComponent(
+                      item.routName
+                    )}`}
+                  >
+                    <button>
+                      <LuDog size={25} /> Donate Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
