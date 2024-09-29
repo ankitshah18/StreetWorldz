@@ -24,7 +24,10 @@
   max-width: 400px;
 }
 
-.gallery {
+.gallery-one,
+.gallery-two,
+.gallery-three,
+.gallery-four {
   display: flex;
   align-items: center;
   justify-content: space-around;

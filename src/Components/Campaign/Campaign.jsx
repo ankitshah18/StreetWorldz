@@ -46,7 +46,11 @@ const Campaign = () => {
           {FoodCampaign.map((item) => (
             <div className={`campaign-card-${item.number}`} key={item.id}>
               <div className="campaign-card" style={getCardColor(item.id)}>
-                <img src={gallery_1} alt="gallery-1" className="gallery-img" />
+                <img
+                  src={item.image}
+                  alt={`gallery-${item.number}`}
+                  className="gallery-img"
+                />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className={`make-a-campaign-${item.number}`}>

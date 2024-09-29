@@ -1,8 +1,14 @@
+import gallery_1 from "../../assets/gallery-1.png";
+import gallery_2 from "../../assets/gallery-2.png";
+import gallery_3 from "../../assets/gallery-3.png";
+import gallery_4 from "../../assets/gallery-4.png";
+
 const FoodCampaign = [
   {
     id: "1",
     number: "one",
     title: "1 Day Meal",
+    image: gallery_1,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
   },
@@ -10,6 +16,7 @@ const FoodCampaign = [
     id: "2",
     number: "two",
     title: "1 Time Meal",
+    image: gallery_2,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
   },
@@ -17,6 +24,7 @@ const FoodCampaign = [
     id: "3",
     number: "three",
     title: "For Street",
+    image: gallery_3,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
   },
@@ -24,6 +32,7 @@ const FoodCampaign = [
     id: "4",
     number: "four",
     title: "For Shelter",
+    image: gallery_4,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
   },

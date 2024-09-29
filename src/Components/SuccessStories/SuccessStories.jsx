@@ -4,10 +4,6 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import gallery_1 from "../../assets/gallery-1.png";
-import gallery_2 from "../../assets/gallery-2.png";
-import gallery_3 from "../../assets/gallery-3.png";
-import gallery_4 from "../../assets/gallery-4.png";
 import white_arrow from "../../assets/white-arrow.png";
 import { StoriesInfo } from "./StoriesData";
 import { Heart } from "lucide-react";
@@ -51,7 +47,12 @@ const Stories = () => {
           {StoriesInfo.map((item) => (
             <div className={`stories-card-${item.number}`} key={item.id}>
               <div className="stories-card" style={getCardColor(item.id)}>
-                <img src={gallery_1} alt="gallery-1" className="gallery-img" />
+                <img
+                  src={item.image}
+                  alt={`gallery-${item.number}`}
+                  className="gallery-img"
+                />
+                {/* <img src={gallery_1} alt="gallery-1" className="gallery-img" /> */}
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className="make-a-stories">
