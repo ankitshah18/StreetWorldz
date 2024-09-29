@@ -1,8 +1,8 @@
 import "./Campaign.css";
-import gallery_1 from "../../assets/gallery-1.png";
 import white_arrow from "../../assets/white-arrow.png";
 import { FoodCampaign } from "./CampaignData";
 import { getCardColor } from "./CampaignData";
+
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -55,7 +55,11 @@ const Campaign = ({ setRouteTitle }) => {
           {FoodCampaign.map((item) => (
             <div className={`campaign-card-${item.number}`} key={item.id}>
               <div className="campaign-card" style={getCardColor(item.id)}>
-                <img src={gallery_1} alt="gallery-1" className="gallery-img" />
+                <img
+                  src={item.image}
+                  alt={`gallery-${item.number}`}
+                  className="gallery-img"
+                />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className={`make-a-campaign-${item.number}`}>

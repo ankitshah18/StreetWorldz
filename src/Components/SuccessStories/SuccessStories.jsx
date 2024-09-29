@@ -4,11 +4,10 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import gallery_1 from "../../assets/gallery-1.png";
-import gallery_2 from "../../assets/gallery-2.png";
-import gallery_3 from "../../assets/gallery-3.png";
-import gallery_4 from "../../assets/gallery-4.png";
 import white_arrow from "../../assets/white-arrow.png";
+import { StoriesInfo } from "./StoriesData";
+import { Heart } from "lucide-react";
+import { getCardColor } from "./StoriesData";
 
 const Stories = () => {
   const settings = {
@@ -43,10 +42,31 @@ const Stories = () => {
         </div>
       </div>
 
-      {/* Carousel for all devices */}
       <div className="gallery">
         <OwlCarousel className="owl-theme" {...settings}>
-          <div className="stories-card-one">
+          {StoriesInfo.map((item) => (
+            <div className={`stories-card-${item.number}`} key={item.id}>
+              <div className="stories-card" style={getCardColor(item.id)}>
+                <img
+                  src={item.image}
+                  alt={`gallery-${item.number}`}
+                  className="gallery-img"
+                />
+                {/* <img src={gallery_1} alt="gallery-1" className="gallery-img" /> */}
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div className="make-a-stories">
+                  <button className="donate-button">
+                    <Heart size={16} style={{ marginRight: "6px" }} />
+                    Read More.
+                  </button>
+                  {/* <img src={white_arrow} alt="white-arrow" /> */}
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* <div className="stories-card-one">
             <div className="stories-card">
               <img src={gallery_1} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
@@ -97,52 +117,8 @@ const Stories = () => {
                 <button>Read More.</button>
               </div>
             </div>
-          </div>
+          </div> */}
         </OwlCarousel>
-        {/* <div className="stories-card">
-            <img src={gallery_1} alt="gallery-1" className="gallery-img" />
-            <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
-            <p>
-              StreetWorldz is a beacon of hope for stray and injured
-              dogs, providing a safe haven for over 500 dogs at our shelter.
-            </p>
-            <div className="make-a-stories">
-              <button>Read More.</button>
-            </div>
-          </div>
-          <div className="stories-card">
-            <img src={gallery_2} alt="gallery-2" className="gallery-img" />
-            <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
-            <p>
-              StreetWorldz is a beacon of hope for stray and injured
-              dogs, providing a safe haven for over 500 dogs at our shelter.
-            </p>
-            <div className="make-a-stories">
-              <button>Read More.</button>
-            </div>
-          </div>
-          <div className="stories-card">
-            <img src={gallery_3} alt="gallery-3" className="gallery-img" />
-            <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
-            <p>
-              StreetWorldz is a beacon of hope for stray and injured
-              dogs, providing a safe haven for over 500 dogs at our shelter.
-            </p>
-            <div className="make-a-stories">
-              <button>Read More.</button>
-            </div>
-          </div>
-          <div className="stories-card">
-            <img src={gallery_4} alt="gallery-4" className="gallery-img" />
-            <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
-            <p>
-              StreetWorldz is a beacon of hope for stray and injured
-              dogs, providing a safe haven for over 500 dogs at our shelter.
-            </p>
-            <div className="make-a-stories">
-              <button>Read More.</button>
-            </div>
-            </div> */}
       </div>
 
       <div className="button-container">

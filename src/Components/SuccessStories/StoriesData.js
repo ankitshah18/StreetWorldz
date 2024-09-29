@@ -3,58 +3,54 @@ import gallery_2 from "../../assets/gallery-2.png";
 import gallery_3 from "../../assets/gallery-3.png";
 import gallery_4 from "../../assets/gallery-4.png";
 
-const FoodCampaign = [
+const StoriesInfo = [
   {
     id: "1",
     number: "one",
-    title: "1 Day Meal",
-    image: gallery_1,
+    title: "Donate Us To Buy Medicines For Injured Dogs",
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
-    routName: "1-day-meal",
+    image: gallery_1,
   },
   {
     id: "2",
     number: "two",
-    title: "1 Time Meal",
+    title: "Donate Us To Buy Medicines For Injured Dogs",
     image: gallery_2,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
-    routName: "1-time-meal",
   },
   {
     id: "3",
     number: "three",
-    title: "For Street",
+    title: "Donate Us To Buy Medicines For Injured Dogs",
     image: gallery_3,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
-    routName: "for-street",
   },
   {
     id: "4",
     number: "four",
-    title: "For Shelter",
+    title: "Donate Us To Buy Medicines For Injured Dogs",
     image: gallery_4,
     description:
       "StreetWorldz is a beacon of hope for stray and injured dogs, providing a safe haven for over 500 dogs at our shelter.",
-    routName: "for-shelter",
   },
 ];
 
 const getCardColor = (id) => {
   switch (id) {
     case "1":
-      return { backgroundColor: "#f8b400", borderRadius: "1rem" }; // Yellow for '1 Day Meal'
+      return { backgroundColor: "#ffffff", borderRadius: "1rem" }; // Yellow for '1 Day Meal'
     case "2":
-      return { backgroundColor: "#e74c3c", borderRadius: "1rem" }; // Red for '1 Time Meal'
+      return { backgroundColor: "#ffffff", borderRadius: "1rem" }; // Red for '1 Time Meal'
     case "3":
-      return { backgroundColor: "#2ecc71", borderRadius: "1rem" }; // Green for 'For Street'
+      return { backgroundColor: "#ffffff", borderRadius: "1rem" }; // Green for 'For Street'
     case "4":
-      return { backgroundColor: "#3498db", borderRadius: "1rem" }; // Blue for 'For Shelter'
+      return { backgroundColor: "#ffffff", borderRadius: "1rem" }; // Blue for 'For Shelter'
     default:
-      return { backgroundColor: "#ccc" }; // Default color
+      return { backgroundColor: "#ffffff" }; // Default color
   }
 };
 
-export { FoodCampaign, getCardColor };
+export { StoriesInfo, getCardColor };
