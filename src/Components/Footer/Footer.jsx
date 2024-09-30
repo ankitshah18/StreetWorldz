@@ -125,7 +125,7 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <p>
-          © Copyright {date} Dog Home Foundation | Developed By :{" "}
+          © Copyright {date} StreetWorldz | Developed By :{" "}
           <span>StreetWorldz Team</span>
         </p>
       </div>
