@@ -19,6 +19,11 @@ import Gallery from "./Components/Gallery/Gallery";
 import Camels from "./Components/Gallery/Camels";
 import Volunteer from "./Components/Rescue/Volunteer";
 import FoodCampaign from "./Pages/FoodCampaign/OneDayMeal";
+import { AppProvider } from "./Components/context/AppContext";
+import SingleStory from "./Components/SuccessStories/SingleStory";
+import AllStories from "./Components/SuccessStories/AllStories";
+import TermsAndConditions from "./Pages/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -35,108 +40,120 @@ const App = () => {
   console.log("Route", routeTitle);
 
   return (
-    <div className="main-content">
-      <Navbar />
+    <AppProvider>
+      <div className="main-content">
+        <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <About setPlayState={setPlayState} />
-              <Campaign setRouteTitle={setRouteTitle} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About setPlayState={setPlayState} />
+                <Campaign setRouteTitle={setRouteTitle} />
 
-              <Donations />
-              <Stories />
+                <Donations />
+                <Stories />
 
-              {/* <Stories /> */}
-              <div className="container">
-                {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
+                {/* <Stories /> */}
+                <div className="container">
+                  {/* <Title subTitle="Gallery" title="Campus Photos" /> */}
 
-                {/* <Title subTitle="TESTIMONIALS" title="What Student Says" /> */}
+                  {/* <Title subTitle="TESTIMONIALS" title="What Student Says" /> */}
 
-                <Title subTitle="Contact Us" title="Get in Touch" />
-                <Contact />
-              </div>
-              <Footer />
-              <VideoPlayer playState={playState} setPlayState={setPlayState} />
-            </>
-          }
-        />
+                  <Title subTitle="Contact Us" title="Get in Touch" />
+                  <Contact />
+                </div>
+                <Footer />
+                <VideoPlayer
+                  playState={playState}
+                  setPlayState={setPlayState}
+                />
+              </>
+            }
+          />
 
-        {/* <Title subTitle="Our PROGRAM" title="What We Offer" /> */}
-        {/* <Programs/> */}
-        <Route
-          path="/aboutus"
-          element={
-            <>
-              {/* <Hero additionalClass={isAboutUsPage ? "aboutus-hero" : ""} /> */}
+          {/* <Title subTitle="Our PROGRAM" title="What We Offer" /> */}
+          {/* <Programs/> */}
+          <Route
+            path="/aboutus"
+            element={
+              <>
+                {/* <Hero additionalClass={isAboutUsPage ? "aboutus-hero" : ""} /> */}
 
-              <MoreAbout />
-              <div className="container"> {/* <Footer /> */}</div>
-            </>
-          }
-        />
-        <Route
-          path="/rescue"
-          element={
-            <>
-              <Rescue />
-            </>
-          }
-        />
-        <Route
-          path="/volunteer"
-          element={
-            <>
-              <Volunteer />
-            </>
-          }
-        />
+                <MoreAbout />
+                <div className="container"> {/* <Footer /> */}</div>
+              </>
+            }
+          />
+          <Route
+            path="/rescue"
+            element={
+              <>
+                <Rescue />
+              </>
+            }
+          />
+          <Route
+            path="/volunteer"
+            element={
+              <>
+                <Volunteer />
+              </>
+            }
+          />
 
-        <Route
-          path="/contact"
-          element={
-            <>
-              <MoreContact />
-            </>
-          }
-        />
-        <Route
-          path="/zaalim"
-          element={
-            <>
-              <Inspiration />
-            </>
-          }
-        />
-        <Route
-          path="/gallery"
-          element={
-            <>
-              <Gallery />
-            </>
-          }
-        />
-        <Route
-          path="/gallery/camels"
-          element={
-            <>
-              <Camels />
-            </>
-          }
-        />
-        <Route
-          path="/featuredFoodCampaign/:title"
-          element={
-            <>
-              <FoodCampaign />
-            </>
-          }
-        />
-      </Routes>
-    </div>
+          <Route
+            path="/contact"
+            element={
+              <>
+                <MoreContact />
+              </>
+            }
+          />
+          <Route
+            path="/zaalim"
+            element={
+              <>
+                <Inspiration />
+              </>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <>
+                <Gallery />
+              </>
+            }
+          />
+          <Route
+            path="/gallery/camels"
+            element={
+              <>
+                <Camels />
+              </>
+            }
+          />
+          <Route
+            path="/featuredFoodCampaign/:title"
+            element={
+              <>
+                <FoodCampaign />
+              </>
+            }
+          />
+          <Route path="/SingleStory/:title" element={<SingleStory />} />
+          <Route path="/allstories" element={<AllStories />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+      </div>
+    </AppProvider>
   );
 };
 

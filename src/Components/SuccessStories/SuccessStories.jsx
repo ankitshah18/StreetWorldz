@@ -3,13 +3,27 @@ import "./SuccessStories.css";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-
+import { Link, useNavigate } from "react-router-dom";
 import white_arrow from "../../assets/white-arrow.png";
 import { StoriesInfo } from "./StoriesData";
 import { Heart } from "lucide-react";
 import { getCardColor } from "./StoriesData";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const Stories = () => {
+  const { setSelectedStory } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  const handleReadMore = (story) => {
+    const titleForURL = story.title.replace(/\s+/g, "-"); // Replace spaces with dashes
+    setSelectedStory(story);
+    navigate(`/SingleStory/${titleForURL}`);
+  };
+  const handleSeeMore = () => {
+    navigate("/allstories");
+  };
+
   const settings = {
     loop: false,
     margin: 20,
@@ -54,19 +68,39 @@ const Stories = () => {
                 />
                 {/* <img src={gallery_1} alt="gallery-1" className="gallery-img" /> */}
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p>
+                  {item.description.split(" ").slice(0, 28).join(" ")}
+                  {item.description.split(" ").length > 40 && "..."}
+                </p>
                 <div className="make-a-stories">
-                  <button className="donate-button">
+                  <button
+                    className="donate-button"
+                    onClick={() => handleReadMore(item)}
+                  >
                     <Heart size={16} style={{ marginRight: "6px" }} />
-                    Read More.
+                    <Link>Read More.</Link>
                   </button>
                   {/* <img src={white_arrow} alt="white-arrow" /> */}
                 </div>
               </div>
             </div>
           ))}
+        </OwlCarousel>
+      </div>
 
-          {/* <div className="stories-card-one">
+      <div className="button-container">
+        <button className="btn dark-btn" onClick={handleSeeMore}>
+          See more here <img src={white_arrow} alt="arrow" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Stories;
+
+{
+  /* <div className="stories-card-one">
             <div className="stories-card">
               <img src={gallery_1} alt="gallery-1" className="gallery-img" />
               <h3>Donate Us To Buy Medicines For Injured Dogs</h3>
@@ -117,17 +151,5 @@ const Stories = () => {
                 <button>Read More.</button>
               </div>
             </div>
-          </div> */}
-        </OwlCarousel>
-      </div>
-
-      <div className="button-container">
-        <button className="btn dark-btn">
-          See more here <img src={white_arrow} alt="arrow" />
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default Stories;
+          </div> */
+}

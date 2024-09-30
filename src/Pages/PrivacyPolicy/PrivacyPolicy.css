@@ -1,0 +1,33 @@
+.conditions {
+  min-height: 60vh;
+  margin: 4rem auto;
+}
+.terms-card {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: white;
+  height: auto;
+}
+.terms-heading-and-points h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.terms-heading-and-points p {
+  margin-left: 1rem;
+  margin-bottom: 5px;
+}
+
+.terms-heading-and-points h5 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.terms-heading-and-points {
+  margin-bottom: 20px;
+}
+
+.terms-heading-and-points span {
+  font-weight: bold;
+}

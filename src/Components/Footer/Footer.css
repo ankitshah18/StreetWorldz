@@ -65,6 +65,9 @@ li {
 .footer-column > * {
   margin-bottom: 10px;
 }
+.footer-column li:hover {
+  text-decoration: underline;
+}
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
@@ -91,6 +94,16 @@ li {
   .social-links li {
     margin: 5px; /* Adjust margin to suit your design */
   }
+}
+.copyright {
+  background-color: #202020;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+.copyright span {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 @media (max-width: 840px) {

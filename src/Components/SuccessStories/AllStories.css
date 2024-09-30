@@ -1,0 +1,38 @@
+.allstories-container {
+  min-height: 60vh;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+.allstory-card {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: white;
+}
+
+.allstory-card h4 {
+  margin-bottom: 15px;
+}
+
+.allstory-card p {
+  margin-bottom: 15px;
+}
+.allstory-button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  background-color: #212ea0;
+  border-radius: 1rem;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 840px) {
+  .btn-cover {
+    display: flex;
+    justify-content: center;
+  }
+}
