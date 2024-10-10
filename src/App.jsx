@@ -24,6 +24,8 @@ import SingleStory from "./Components/SuccessStories/SingleStory";
 import AllStories from "./Components/SuccessStories/AllStories";
 import TermsAndConditions from "./Pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+import AllMeals from "./Components/Campaign/AllMeals";
+import SingleMeal from "./Components/Campaign/SingleMeal";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -144,6 +146,8 @@ const App = () => {
               </>
             }
           />
+          <Route path="/allmeals" element={<AllMeals />} />
+          <Route path="/SingleMeal/:title" element={<SingleMeal />} />
           <Route path="/SingleStory/:title" element={<SingleStory />} />
           <Route path="/allstories" element={<AllStories />} />
           <Route
