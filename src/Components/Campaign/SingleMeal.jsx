@@ -15,6 +15,8 @@ import cat from "../../assets/Cat.jpg";
 
 import { AppContext } from "../context/AppContext";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
+
+import toast, { Toaster } from "react-hot-toast";
 const SingleMeal = () => {
   const {
     selectedMeal,
@@ -78,6 +80,7 @@ const SingleMeal = () => {
       };
     });
   };
+
   const handleDecrement = (itemTitle, itemCost) => {
     setFoodItemCounters((prevCounters) => {
       const currentCount = prevCounters[itemTitle] || 0;
@@ -107,6 +110,107 @@ const SingleMeal = () => {
         [itemTitle]: newCount,
       };
     });
+  };
+
+  // handlePayment Function
+  const handlePayment = async () => {
+    console.log("Payment initiated");
+    const amount = totalCost; // Use the updated total cost
+    console.log("Amount:", amount);
+
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/order`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ amount }), // Pass the correct amount
+        }
+      );
+
+      if (!res.ok) {
+        console.error("HTTP error:", res.status, await res.text());
+        return; // Exit if there's an error
+      }
+
+      const data = await res.json();
+      console.log("Payment order data:", data);
+      handlePaymentVerify(data.data);
+    } catch (error) {
+      console.error("Payment error:", error);
+    }
+  };
+
+  // handlePayment Function
+  /* const handlePayment = async () => {
+    console.log("Payment initiated");
+    console.log("Amount:", amount); // Ensure 'amount' is defined
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/order`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            amount,
+          }),
+        }
+      );
+
+      const data = await res.json();
+      console.log("Payment order data:", data);
+      handlePaymentVerify(data.data);
+    } catch (error) {
+      console.error("Payment error:", error);
+    }
+  }; */
+
+  // handlePaymentVerify Function
+  const handlePaymentVerify = async (data) => {
+    const options = {
+      key: import.meta.env.RAZORPAY_KEY_ID,
+      amount: data.amount,
+      currency: data.currency,
+      name: "StreetWorldz",
+      description: "Test Mode",
+      order_id: data.id,
+      handler: async (response) => {
+        console.log("response", response);
+        try {
+          const res = await fetch(
+            `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/verify`,
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              }),
+            }
+          );
+
+          const verifyData = await res.json();
+
+          if (verifyData.message) {
+            toast.success(verifyData.message);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      theme: {
+        color: "#5f63b8",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
   };
 
   console.log("count", foodItemCounters);
@@ -231,17 +335,33 @@ const SingleMeal = () => {
                     <h5 style={{ marginBottom: "15px" }}>UPI</h5>
                     <div className="payment-option-icons">
                       <div className="payment-icon">
-                        <img src={googlepay} alt="" />
+                        <img
+                          src={googlepay}
+                          alt="Google Pay"
+                          onClick={handlePayment}
+                          style={{ cursor: "pointer" }}
+                        />
                         <p>Google Pay</p>
                       </div>
                       <div className="payment-icon">
-                        <img src={phonepay} alt="" />
+                        <img
+                          src={phonepay}
+                          alt="Phone Pay"
+                          onClick={handlePayment}
+                          style={{ cursor: "pointer" }}
+                        />
                         <p>Phone Pay</p>
                       </div>
                       <div className="payment-icon">
-                        <img src={bhimupi} alt="" />
+                        <img
+                          src={bhimupi}
+                          alt="Bhim Pay"
+                          onClick={handlePayment}
+                          style={{ cursor: "pointer" }}
+                        />
                         <p>Bhim Upi</p>
                       </div>
+                      <Toaster />
                     </div>
                   </div>
                 </div>
