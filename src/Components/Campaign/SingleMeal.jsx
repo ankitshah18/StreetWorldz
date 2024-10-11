@@ -25,8 +25,12 @@ const SingleMeal = () => {
     setItemCosts,
     totalCost,
     setTotalCost,
+    donorName,
+    setDonorName,
+    donationDetails,
+    setDonationDetails,
   } = useContext(AppContext);
-  console.log("Selected Meal : ", selectedMeal);
+  // console.log("Selected Meal : ", selectedMeal);
 
   useEffect(() => {
     if (!selectedMeal) {
@@ -109,12 +113,30 @@ const SingleMeal = () => {
     });
   };
 
-  console.log("count", foodItemCounters);
-  console.log("cost", itemCosts);
+  const handleInputChange = (event) => {
+    setDonorName(event.target.value);
+  };
+
+  const handleDonation = () => {
+    if (donorName && totalCost > 0) {
+      setDonationDetails({ name: donorName, totalCost });
+      console.log("Donation Details:", donationDetails);
+    } else if (!donorName) {
+      alert("Please enter your name.");
+    } else if (totalCost <= 0) {
+      alert("Please select items to donate.");
+    } else {
+      alert("Please select items and enter your name.");
+    }
+  };
+
+  // console.log("count", foodItemCounters);
+  // console.log("cost", itemCosts);
   console.log("totalCost", totalCost);
-  selectedMeal.foodItems?.forEach((foodItem) => {
-    console.log("Food Description:", foodItem.foodDescription);
-  });
+  console.log("Donation Details", donationDetails);
+  // selectedMeal.foodItems?.forEach((foodItem) => {
+  //   console.log("Food Description:", foodItem.foodDescription);
+  // });
 
   return (
     <div>
@@ -214,7 +236,13 @@ const SingleMeal = () => {
                   </div> */}
                     <hr />
                     <div className="money-tabs">
-                      <div>Total Cost : ₹{totalCost}</div>
+                      <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        value={donorName}
+                        onChange={handleInputChange}
+                      />
+                      <div className="cost">Total Cost : ₹{totalCost}</div>
                       {/* <div
                       className="money-tab"
                       style={{
@@ -242,6 +270,16 @@ const SingleMeal = () => {
                         <img src={bhimupi} alt="" />
                         <p>Bhim Upi</p>
                       </div>
+                    </div>
+                    <div className="final-payment-button">
+                      <button
+                        className="payment-donate-button"
+                        onClick={handleDonation}
+                      >
+                        {" "}
+                        <LuDog />
+                        Donate
+                      </button>
                     </div>
                   </div>
                 </div>

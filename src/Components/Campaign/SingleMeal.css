@@ -204,8 +204,17 @@ hr {
 }
 .money-tabs {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 15px;
+}
+.money-tabs input:focus {
+  border: none;
+  outline: none;
+}
+.cost {
+  margin-left: 5px;
 }
 .money-tab {
   padding: 5px 12px;
@@ -241,6 +250,31 @@ hr {
 }
 .payment-icon p {
   font-size: 10px;
+}
+.final-payment-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.payment-donate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  width: 80%;
+  margin-top: 15px;
+  border-radius: 1rem;
+  border: none;
+  gap: 1rem;
+  font-size: 1rem;
+  background-color: #1bb7bc;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.payment-donate-button:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 1270px) {
   .title-food img {
