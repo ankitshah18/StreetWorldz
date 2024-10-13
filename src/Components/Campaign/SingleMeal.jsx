@@ -14,6 +14,8 @@ import { FiMinusCircle } from "react-icons/fi";
 import cat from "../../assets/Cat.jpg";
 
 import { AppContext } from "../context/AppContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 
 import toast, { Toaster } from "react-hot-toast";
@@ -27,8 +29,12 @@ const SingleMeal = () => {
     setItemCosts,
     totalCost,
     setTotalCost,
+    donorName,
+    setDonorName,
+    donationDetails,
+    setDonationDetails,
   } = useContext(AppContext);
-  console.log("Selected Meal : ", selectedMeal);
+  // console.log("Selected Meal : ", selectedMeal);
 
   useEffect(() => {
     if (!selectedMeal) {
@@ -213,12 +219,132 @@ const SingleMeal = () => {
     rzp1.open();
   };
 
-  console.log("count", foodItemCounters);
-  console.log("cost", itemCosts);
+  // handlePayment Function
+  const handlePayment = async () => {
+    console.log("Payment initiated");
+    const amount = totalCost; // Use the updated total cost
+    console.log("Amount:", amount);
+
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/order`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ amount }), // Pass the correct amount
+        }
+      );
+
+      if (!res.ok) {
+        console.error("HTTP error:", res.status, await res.text());
+        return; // Exit if there's an error
+      }
+
+      const data = await res.json();
+      console.log("Payment order data:", data);
+      handlePaymentVerify(data.data);
+    } catch (error) {
+      console.error("Payment error:", error);
+    }
+  };
+
+  // handlePayment Function
+  /* const handlePayment = async () => {
+    console.log("Payment initiated");
+    console.log("Amount:", amount); // Ensure 'amount' is defined
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/order`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            amount,
+          }),
+        }
+      );
+
+      const data = await res.json();
+      console.log("Payment order data:", data);
+      handlePaymentVerify(data.data);
+    } catch (error) {
+      console.error("Payment error:", error);
+    }
+  }; */
+
+  // handlePaymentVerify Function
+  const handlePaymentVerify = async (data) => {
+    const options = {
+      key: import.meta.env.RAZORPAY_KEY_ID,
+      amount: data.amount,
+      currency: data.currency,
+      name: "StreetWorldz",
+      description: "Test Mode",
+      order_id: data.id,
+      handler: async (response) => {
+        console.log("response", response);
+        try {
+          const res = await fetch(
+            `${import.meta.env.VITE_BACKEND_HOST_URL}/api/payment/verify`,
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              }),
+            }
+          );
+
+          const verifyData = await res.json();
+
+          if (verifyData.message) {
+            toast.success(verifyData.message);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      theme: {
+        color: "#5f63b8",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
+
+  const handleInputChange = (event) => {
+    setDonorName(event.target.value);
+  };
+
+  const handleDonation = () => {
+    if (donorName && totalCost > 0) {
+      setDonationDetails({ name: donorName, totalCost });
+      console.log("Donation Details:", donationDetails);
+      toast.success("Thank you for your donation!");
+    } else if (!donorName) {
+      toast.error("Please enter your name.");
+    } else if (totalCost <= 0) {
+      toast.error("Please select items to donate.");
+    } else {
+      toast.error("Please select items and enter your name.");
+    }
+  };
+
+  // console.log("count", foodItemCounters);
+  // console.log("cost", itemCosts);
   console.log("totalCost", totalCost);
-  selectedMeal.foodItems?.forEach((foodItem) => {
-    console.log("Food Description:", foodItem.foodDescription);
-  });
+  console.log("Donation Details", donationDetails);
+  // selectedMeal.foodItems?.forEach((foodItem) => {
+  //   console.log("Food Description:", foodItem.foodDescription);
+  // });
 
   return (
     <div>
@@ -238,6 +364,20 @@ const SingleMeal = () => {
             <strong>(This donation is under 80G exempted)</strong>
             <br />
             <span>Donate via Card, UPI &amp; (INR Only)</span>
+          </div>
+          <div className="donation-alert">
+            <h6>
+              <strong>Important Donation Notice:</strong> <br />
+            </h6>
+            <p>
+              This donation page allows contributions only towards the
+              predefined items or packages listed below. Each item has a fixed
+              cost to ensure transparency and consistent care. Kindly select
+              from the available options to support the cause. Your generous
+              donations will directly contribute to the meals and resources
+              required for the well-being of animals in need. Thank you for your
+              understanding and support!
+            </p>
           </div>
           <div className="description-and-payment">
             <div className="payment-div">
@@ -318,7 +458,13 @@ const SingleMeal = () => {
                   </div> */}
                     <hr />
                     <div className="money-tabs">
-                      <div>Total Cost : ₹{totalCost}</div>
+                      <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        value={donorName}
+                        onChange={handleInputChange}
+                      />
+                      <div className="cost">Total Cost : ₹{totalCost}</div>
                       {/* <div
                       className="money-tab"
                       style={{
@@ -362,6 +508,16 @@ const SingleMeal = () => {
                         <p>Bhim Upi</p>
                       </div>
                       <Toaster />
+                    </div>
+                    <div className="final-payment-button">
+                      <button
+                        className="payment-donate-button"
+                        onClick={handleDonation}
+                      >
+                        {" "}
+                        <LuDog />
+                        Donate
+                      </button>
                     </div>
                   </div>
                 </div>

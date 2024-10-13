@@ -10,6 +10,8 @@ export const AppProvider = ({ children }) => {
   const [foodItemCounters, setFoodItemCounters] = useState({});
   const [itemCosts, setItemCosts] = useState({});
   const [totalCost, setTotalCost] = useState(0);
+  const [donorName, setDonorName] = useState("");
+  const [donationDetails, setDonationDetails] = useState(null);
 
   return (
     <AppContext.Provider
@@ -26,6 +28,10 @@ export const AppProvider = ({ children }) => {
         setItemCosts,
         totalCost,
         setTotalCost,
+        donorName,
+        setDonorName,
+        donationDetails,
+        setDonationDetails,
       }}
     >
       {children}

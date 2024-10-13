@@ -26,6 +26,9 @@ import TermsAndConditions from "./Pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import AllMeals from "./Components/Campaign/AllMeals";
 import SingleMeal from "./Components/Campaign/SingleMeal";
+import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -43,6 +46,7 @@ const App = () => {
 
   return (
     <AppProvider>
+      <ToastContainer position="top-center" />
       <div className="main-content">
         <Navbar />
 
