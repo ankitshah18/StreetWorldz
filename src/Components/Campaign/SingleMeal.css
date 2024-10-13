@@ -276,6 +276,20 @@ hr {
 .payment-donate-button:hover {
   transform: scale(1.1);
 }
+
+.donation-alert {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.donation-alert h6 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
 @media (max-width: 1270px) {
   .title-food img {
     width: 60rem;

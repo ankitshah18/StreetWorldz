@@ -14,6 +14,8 @@ import { FiMinusCircle } from "react-icons/fi";
 import cat from "../../assets/Cat.jpg";
 
 import { AppContext } from "../context/AppContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PhotoContainer from "../PhotoContainer/PhotoContainer";
 const SingleMeal = () => {
   const {
@@ -121,12 +123,13 @@ const SingleMeal = () => {
     if (donorName && totalCost > 0) {
       setDonationDetails({ name: donorName, totalCost });
       console.log("Donation Details:", donationDetails);
+      toast.success("Thank you for your donation!");
     } else if (!donorName) {
-      alert("Please enter your name.");
+      toast.error("Please enter your name.");
     } else if (totalCost <= 0) {
-      alert("Please select items to donate.");
+      toast.error("Please select items to donate.");
     } else {
-      alert("Please select items and enter your name.");
+      toast.error("Please select items and enter your name.");
     }
   };
 
@@ -156,6 +159,20 @@ const SingleMeal = () => {
             <strong>(This donation is under 80G exempted)</strong>
             <br />
             <span>Donate via Card, UPI &amp; (INR Only)</span>
+          </div>
+          <div className="donation-alert">
+            <h6>
+              <strong>Important Donation Notice:</strong> <br />
+            </h6>
+            <p>
+              This donation page allows contributions only towards the
+              predefined items or packages listed below. Each item has a fixed
+              cost to ensure transparency and consistent care. Kindly select
+              from the available options to support the cause. Your generous
+              donations will directly contribute to the meals and resources
+              required for the well-being of animals in need. Thank you for your
+              understanding and support!
+            </p>
           </div>
           <div className="description-and-payment">
             <div className="payment-div">

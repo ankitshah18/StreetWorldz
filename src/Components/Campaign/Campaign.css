@@ -3,6 +3,11 @@
   width: 100%;
   padding: 1rem;
   background-color: #e1feff;
+  /* background-image: url("../../assets/wooden-fence.jpg");
+  background-repeat: no-repeat;
+  object-fit: contain; */
+  background: url("../../assets/wooden-fence.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .campaign-heading {
