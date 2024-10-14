@@ -8,9 +8,12 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { LuDog } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const Campaign = ({ setRouteTitle }) => {
+  const { setSelectedMeal } = useContext(AppContext);
   const navigate = useNavigate();
   const settings = {
     loop: false,
@@ -34,11 +37,27 @@ const Campaign = ({ setRouteTitle }) => {
     },
   };
 
-  const handleDonateClick = (title) => {
-    setRouteTitle(title);
-    localStorage.setItem("routeTitle", title); // Save to localStorage
-    navigate(`/featuredFoodCampaign/${encodeURIComponent(title)}`); // Navigate with title
+  const handleSeeMore = () => {
+    navigate("/allmeals");
   };
+
+  const DonateForOneMeal = (meal) => {
+    console.log("Item", meal);
+    const titleForURL = meal.title.replace(/\s+/g, "-");
+
+    // Save selected meal to localStorage
+    localStorage.setItem("selectedMeal", JSON.stringify(meal));
+
+    setSelectedMeal(meal);
+    navigate(`/SingleMeal/${titleForURL}`);
+  };
+
+  // const DonateForOneMeal = (meal) => {
+  //   console.log("Item", meal);
+  //   const titleForURL = meal.title.replace(/\s+/g, "-");
+  //   setSelectedMeal(meal);
+  //   navigate(`/SingleMeal/${titleForURL}`);
+  // };
 
   return (
     <div className="campaign container">
@@ -63,15 +82,9 @@ const Campaign = ({ setRouteTitle }) => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <div className={`make-a-campaign-${item.number}`}>
-                  <Link
-                    to={`/featuredFoodCampaign/${encodeURIComponent(
-                      item.routName
-                    )}`}
-                  >
-                    <button>
-                      <LuDog size={25} /> Donate Now
-                    </button>
-                  </Link>
+                  <button onClick={() => DonateForOneMeal(item)}>
+                    <LuDog size={25} /> Donate Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -83,7 +96,7 @@ const Campaign = ({ setRouteTitle }) => {
         <img src={gallery_4} alt="" /> */}
       </div>
       <div className="button-container">
-        <button className="btn dark-btn">
+        <button className="btn dark-btn" onClick={handleSeeMore}>
           See more here <img src={white_arrow} alt="" />
         </button>
       </div>

@@ -16,7 +16,7 @@ const AllStories = () => {
     setSelectedStory(story);
     navigate(`/SingleStory/${titleForURL}`);
   };
-  console.log("StoriesInfo", StoriesInfo);
+  // console.log("StoriesInfo", StoriesInfo);
   return (
     <div>
       <PhotoContainer image={cat} text="Success Stories" minHeight="30vh" />
