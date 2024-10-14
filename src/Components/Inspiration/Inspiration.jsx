@@ -15,7 +15,7 @@ const Inspiration = () => {
 
   return (
     <div className="inspiration-main-container">
-      <PhotoContainer image={cat} text="Inspiration" minHeight="26vh" />
+      {/* <PhotoContainer image={cat} text="Inspiration" minHeight="20vh" /> */}
       <div className="image-container">
         <div className="inspiration-container">
           <h2 className="inspiration-heading">Zaalim</h2>
