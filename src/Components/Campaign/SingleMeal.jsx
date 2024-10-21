@@ -25,7 +25,7 @@ const SingleMeal = () => {
     setSelectedMeal,
     setFoodItemCounters,
     foodItemCounters,
-    itemCosts,
+    /* itemCosts, */
     setItemCosts,
     totalCost,
     setTotalCost,
@@ -125,7 +125,7 @@ const SingleMeal = () => {
     if (donorName && totalCost > 0) {
       setDonationDetails({ name: donorName, totalCost });
       console.log("Donation Details:", donationDetails);
-      ("Thank you for your donation!");
+      toast.success("Thank you for your donation!");
     } else if (!donorName) {
       toast.error("Please enter your name.");
     } else if (totalCost <= 0) {
@@ -226,6 +226,11 @@ const SingleMeal = () => {
               }),
             }
           );
+
+          if (!res.ok) {
+            console.error("HTTP error:", res.status, await res.text()); // Log server error
+            return;
+          }
 
           const verifyData = await res.json();
 
