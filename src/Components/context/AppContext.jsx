@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
   const [totalCost, setTotalCost] = useState(0);
   const [donorName, setDonorName] = useState("");
   const [donationDetails, setDonationDetails] = useState(null);
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   return (
     <AppContext.Provider
@@ -32,6 +33,8 @@ export const AppProvider = ({ children }) => {
         setDonorName,
         donationDetails,
         setDonationDetails,
+        isAuthorized,
+        setIsAuthorized,
       }}
     >
       {children}

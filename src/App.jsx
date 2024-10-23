@@ -29,6 +29,8 @@ import SingleMeal from "./Components/Campaign/SingleMeal";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CreateCampaign from "./Components/CreateCampaign/CreateCampaign";
+import Login from "./Components/Login/Login";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -38,8 +40,6 @@ const App = () => {
     localStorage.getItem("routeTitle") || ""
   );
 
-  const location = useLocation();
-
   // console.log("aboutus", location.pathname);
 
   console.log("Route", routeTitle);
@@ -47,8 +47,9 @@ const App = () => {
   return (
     <AppProvider>
       <ToastContainer position="top-center" />
+
       <div className="main-content">
-        <Navbar />
+        <ConditionalNavbar />
 
         <Routes>
           <Route
@@ -159,10 +160,26 @@ const App = () => {
             element={<TermsAndConditions />}
           />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/create-campaign" element={<CreateCampaign />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </AppProvider>
   );
+};
+
+const ConditionalNavbar = () => {
+  const location = useLocation();
+
+  // Hide Navbar for the create-campaign route
+  if (
+    location.pathname === "/login" ||
+    location.pathname === "/create-campaign"
+  ) {
+    return null; // Don't render Navbar
+  }
+
+  return <Navbar />; // Render Navbar for all other routes
 };
 
 export default App;
