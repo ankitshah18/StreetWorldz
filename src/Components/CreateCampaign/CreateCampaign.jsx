@@ -22,6 +22,7 @@ const CreateCampaign = () => {
         <input type="text" placeholder="Title of Donation" />
         <input type="number" placeholder="Enter your phone number" />
         <input type="email" placeholder="Enter your email" />
+        <input type="file" />
         <textarea placeholder="Description of the donation" rows={15} />
 
         <button className="btn">Create Campaign</button>
