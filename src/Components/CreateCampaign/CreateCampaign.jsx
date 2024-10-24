@@ -18,6 +18,7 @@ const CreateCampaign = () => {
     <div className="container">
       <div className=" create-donation">
         <h4>Create New Donation Campaign</h4>
+
         <input type="number" placeholder="Enter amount of donation" />
         <input type="text" placeholder="Title of Donation" />
         <input type="number" placeholder="Enter your phone number" />
