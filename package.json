@@ -12,6 +12,7 @@
   "dependencies": {
     "@formfacade/embed-react": "^1.0.4",
     "axios": "^1.7.4",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.3",
     "lucide-react": "^0.438.0",
     "mdb-react-ui-kit": "^9.0.0",

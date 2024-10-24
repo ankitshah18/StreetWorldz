@@ -1,24 +1,46 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import "./Login.css";
 import { toast } from "react-toastify";
+import bcrypt from "bcryptjs"; // Import bcryptjs
 
 const Login = () => {
+  // Pre-hashed password using bcrypt
   const AdminUsername = "ankit";
-  const AdminPassword = "shah";
+  const AdminPasswordHash =
+    "$2a$10$xwmP0oMVV6WT0P3lCTE8qO1ScFLhp6cCeCKHs.B14FwAPJHF8vGNa";
 
   const { setIsAuthorized } = useContext(AppContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const sessionTimeout = 30 * 60 * 1000;
 
-  const handleLogin = (e) => {
+  const handleLogout = () => {
+    setIsAuthorized(false);
+    localStorage.removeItem("loginTime");
+    navigate("/login");
+    toast.warning("Your session has expired. Please log in again.");
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === AdminUsername && password === AdminPassword) {
-      setIsAuthorized(true);
-      navigate("/create-campaign");
+
+    // Check if the username matches
+    if (username === AdminUsername) {
+      const isPasswordValid = await bcrypt.compare(password, AdminPasswordHash);
+      if (isPasswordValid) {
+        localStorage.setItem("loginTime", Date.now());
+        setIsAuthorized(true);
+        navigate("/create-campaign");
+        setTimeout(() => {
+          handleLogout();
+        }, sessionTimeout);
+      } else {
+        toast.error("Invalid username or password. Please try again.");
+      }
     } else {
       toast.error("Invalid username or password. Please try again.");
     }
