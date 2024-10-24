@@ -16,7 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const sessionTimeout = 30 * 60 * 1000;
+  const sessionTimeout = 60 * 60 * 1000;
 
   const handleLogout = () => {
     setIsAuthorized(false);

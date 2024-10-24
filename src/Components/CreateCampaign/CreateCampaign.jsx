@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const CreateCampaign = () => {
   const { isAuthorized, setIsAuthorized } = useContext(AppContext);
   const navigate = useNavigate();
-  const sessionTimeout = 30 * 60 * 1000;
+  const sessionTimeout = 60 * 60 * 1000;
 
   useEffect(() => {
     const checkSession = () => {
