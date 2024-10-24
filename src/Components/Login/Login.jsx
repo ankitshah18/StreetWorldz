@@ -18,6 +18,7 @@ const Login = () => {
     e.preventDefault();
     if (username === AdminUsername && password === AdminPassword) {
       setIsAuthorized(true);
+      localStorage.setItem("isAuthorized", "true");
       navigate("/create-campaign");
     } else {
       toast.error("Invalid username or password. Please try again.");

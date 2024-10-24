@@ -1,0 +1,37 @@
+.container-campaign {
+  /* background-color: #400000; */
+  height: 100vh;
+}
+
+.create-donation {
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.create-donation h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.create-donation input {
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 0.5px solid rgb(224 225 227);
+  background-color: #f5f5f5;
+}
+.create-donation textarea {
+  width: 100%;
+  border-bottom: 0.5px solid rgb(224 225 227);
+  background-color: #f5f5f5;
+  margin-bottom: 25px;
+}
+.create-donation textarea:focus {
+  outline: none;
+}
+
+.create-donation input:focus {
+  outline: none;
+}

@@ -8,15 +8,24 @@ const CreateCampaign = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isAuthorized) {
+    const isAuth = localStorage.getItem("isAuthorized");
+    if (!isAuth) {
       navigate("/"); // Redirect to login if not authorized
     }
-  }, [isAuthorized, navigate]);
+  }, [navigate]);
 
   return (
-    <div>
-      <h1>Create Campaign Page</h1>
-      {/* Rest of your component */}
+    <div className="container">
+      <div className=" create-donation">
+        <h4>Create New Donation Campaign</h4>
+        <input type="number" placeholder="Enter amount of donation" />
+        <input type="text" placeholder="Title of Donation" />
+        <input type="number" placeholder="Enter your phone number" />
+        <input type="email" placeholder="Enter your email" />
+        <textarea placeholder="Description of the donation" rows={15} />
+
+        <button className="btn">Create Campaign</button>
+      </div>
     </div>
   );
 };
