@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom"; // For navigation
-import { AppContext } from "../context/AppContext"; // Import your context
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 import "./Login.css";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,7 @@ const Login = () => {
   const { setIsAuthorized } = useContext(AppContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -49,7 +49,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            {error && <p className="error-message">{error}</p>}
+
             <button type="submit" className="btn">
               Login
             </button>
